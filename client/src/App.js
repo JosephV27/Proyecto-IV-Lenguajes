@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-center">
+				Bienvenido a Luiki Kart!!!
+			</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			 
+			<button type="button" class="btn btn-primary btn-lg btn-block">
+				CREAR PARTIDA
+			</button>
+		</div>
+		<div class="col-md-4">
+			 
+			<button type="button" class="btn btn-primary btn-lg btn-block">
+				UNIRSE A JUEGO
+			</button>
+		</div>
+		<div class="col-md-4">
+			 
+			<button type="button" class="btn btn-lg btn-block btn-primary">
+				VER RANKING
+			</button>
+		</div>
+	</div>
+  
+</div>
   );
 }
 
