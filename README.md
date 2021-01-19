@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Proyecto-IV-Lenguajes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Instituto Tecnológico de Costa Rica - Ingeniería en Computación**
 
-## Available Scripts
+**Lenguajes de Programación - Semestre II 2020**
 
-In the project directory, you can run:
+**Profesor: Allan Rodríguez Dávila**
 
-### `npm start`
+## Documentación del proyecto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Manual de Usuario <img src= https://raw.githubusercontent.com/fabiospampinato/vscode-terminals/master/resources/logo.png width =20 height=20>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Este proyecto fue desarollado con el [Creador de Aplicaciones de React](https://github.com/facebook/create-react-app).
 
-### `npm test`
+En el directorio del proyecto puede correr:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### `npm start`
 
-### `npm run build`
+Para correr la aplicacion en modo desarollo.\
+Abrir [http://localhost:3000](http://localhost:3000) y verlo en el navegador.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Si se desea lanzar el servidor utilizar:
+#### `npm run dev`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Pruebas de funcionalidad <img src= https://upload.wikimedia.org/wikipedia/commons/b/b0/Light_green_check.svg width=20 height=20>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Descripción del problema <img src= https://images.uncyclomedia.co/uncyclopedia/en/0/01/DramaticQuestionMark.png width =20 height=20>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Se requiere una investigación acerca de las funcionalidades detalladas de los juegos de carreras\
+ya que lo que se desea es reproducir el comportamiento del mismo.
 
-## Learn More
+#### Cliente
+Se debe desarrollar la funcionalidad en la aplicación del cliente en la cual el usuario pueda elegir
+entre tres opciones:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**a) Crear partida**\
+**b) Unirse a Juego**\
+**c) Ver ranking**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+**Crear partida**\
+Debe desarrollar la funcionalidad para generar un nuevo juego, donde el usuario podrá
+personalizar el juego por medio de las siguientes opciones:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* a) Seleccionar el tipo de juego
+* b) Seleccionar pista
+* c) Una vez creado se generará un código identificador de partida.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Unirse a juego**\
+Los usuarios tendrán la funcionalidad unirse a una partida:
+se le muestra los usuarios la lista de partidas por iniciar con su información: el área de juego, la
+pista, el recorrido según la temática, y los usuarios unidos.
 
-### Making a Progressive Web App
+*Juego*\
+El área de juego debe disponer de un área para poder jugar o correr, donde inicialmente se muestran los vehículos (al inicio de la pista) y el usuario pueda ir moviéndolas a un espacio válido.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+*Pistas predefinidas*\
+El sistema debe tener al menos tres pistas de juego, con un nombre de la pista y una temática.
 
-### Advanced Configuration
+*Estadísticas por juego*\
+Por cada juego se debe indicar lo siguiente:
+* a) Nombre de jugadores y su tiempo, ordenado ascendentemente
+* b) Pista
+* c) Identificador de partida
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Ranking**\
+Se debe mostrar información de los ganadores de cada partida. Por cada juego se debe mostrar la
+siguiente información:
+* a) Nombre del ganador
+* b) Tiempo
+* c) Pista
+* d) Vueltas
+* e) Identificador de partida
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Diseño del programa <img src=https://cdn2.iconfinder.com/data/icons/creative-and-design-12/64/Creative-Development-idea-research-design-512.png width=20 height=20>
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Librerías usadas <img src=https://image.flaticon.com/icons/png/512/130/130304.png width=20 height=20>
+
+|Estructura   |                                      Funciones                                 |
+|-------------|--------------------------------------------------------------------------------|
+|             |                                                                         |
+
+### Análisis de resultados
+
+#### Objetivos logrados 
+
+#### Objetivos no logrados 
+
+
+### Bitácora
+
+La bitácora de los commits se encuentran dentro en la ruta `docs/` en la cual se ve un detalle de cada avance.
+
+---
+Autores:
+
+**Wilhelm Carstens (Danny Ocean) @wolam**
+
+**Joseph Valenciano @Josephv27**
