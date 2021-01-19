@@ -63,14 +63,14 @@ El área de juego debe disponer de un área para poder jugar o correr, donde ini
 El sistema debe tener al menos tres pistas de juego, con un nombre de la pista y una temática.
 
 *Estadísticas por juego*\
-Por cada juego se debe indicar lo siguiente:\
+Por cada juego se debe indicar lo siguiente:
 * a) Nombre de jugadores y su tiempo, ordenado ascendentemente
 * b) Pista
 * c) Identificador de partida
 
 **Ranking**\
 Se debe mostrar información de los ganadores de cada partida. Por cada juego se debe mostrar la
-siguiente información:\
+siguiente información:
 * a) Nombre del ganador
 * b) Tiempo
 * c) Pista
