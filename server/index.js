@@ -10,7 +10,7 @@ app.use(express.json());
 
 // Routes  
 // app.use('/api/juego', require('./server/routes/routes'));
-app.get('/', (req, res) => {
+app.get('/crear-partida', (req, res) => {
     res.send('Hello World');
 });
 
