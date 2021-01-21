@@ -1,0 +1,33 @@
+.game-mode-title {
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.track-title{
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.figure {
+    display: block;
+    margin-left: 200px;
+    margin-top: 20px;
+    width: 30%;
+  }
+
+h5 {
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.forms {
+    margin-left: 10px;
+}
+
+.game-configuration-title{
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
