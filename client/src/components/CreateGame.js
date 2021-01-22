@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import vs from '../images/vs.jpeg';
 import './styles/CreateGame.css'
+import { Link } from 'react-router-dom';
 
 class CreateGame extends Component {
 
@@ -20,23 +21,26 @@ class CreateGame extends Component {
         this.setState({
             laps: event.target.value
         })
-    }  
+    }
 
     handlePlayersChange = (event) => {
         this.setState({
             players: event.target.value
         })
-    }  
+    }
 
     handleTrackChange = (event) => {
         this.setState({
             track: event.target.value
         })
-    }  
+    }
 
     handleSubmit = (event) => {
-        alert(`${this.state.laps} ${this.state.players} ${this.state.track}`);
+        // alert(`${this.state.laps} ${this.state.players} ${this.state.track}`);
         event.preventDefault();
+        return (
+            <h1>Hola Mundo</h1>
+        );
     }
 
     render() {
@@ -53,11 +57,11 @@ class CreateGame extends Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-4">
-                            <form onSubmit={this.handleSubmit}>
+                            <form>
                                 <div className="form-group">
 
                                     <label>
-                                        Cantidad de Vueltas: 
+                                        Cantidad de Vueltas:
 					                </label>
                                     <input type="text" className="form-control" id="NumberofLaps" value={this.state.laps} onChange={this.handleLapsChange} />
                                 </div>
@@ -79,10 +83,7 @@ class CreateGame extends Component {
                                         <option value="pueblo">Pueblo</option>
                                     </select>
                                 </div>
-                    
-                                <button type="submit" className="btn btn-primary">
-                                    Crear Partida
-				                </button>
+                                <Link className="btn btn-primary btn-lg" role="button" to="/juego">Crear Partida</Link>
                             </form>
                         </div>
                         <div className="col-md-4">

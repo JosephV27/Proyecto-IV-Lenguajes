@@ -1,12 +1,11 @@
 import React, {Component} from 'react'
+import barrier from '../images/barrier.svg'
 
 export default class Obstacle extends Component{
 
     render(){
         return(
-            <div className={"obstacle"} >
-                X
-            </div>
+            <img className={"obstacle"} src={barrier} alt="barrier for cars"/>
         )
     }
 }

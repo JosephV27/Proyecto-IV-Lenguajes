@@ -12,7 +12,6 @@ function App() {
 			<Route path="/crear-partida" component={CreateGame} />
 			<Route path="/juego" component={Game} />
 		</Router>
-
 	);
 }
 
