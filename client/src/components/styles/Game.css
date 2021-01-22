@@ -1,0 +1,27 @@
+.game-board {
+  display: grid;
+  width: 850px;
+  height: 900px;
+  margin: auto;
+  margin-top: 10px;
+  
+}
+
+.tile {
+  border-style: solid;
+}
+
+.start {
+  border-style: solid;
+  text-align: center;
+}
+
+.obstacle{
+  border-style: solid;
+  text-align: center;
+}
+
+.car{
+  border-style: solid;
+  text-align: center;
+}
