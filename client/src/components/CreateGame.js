@@ -53,7 +53,7 @@ class CreateGame extends Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-4">
-                            <form role="form" onSubmit={this.handleSubmit}>
+                            <form onSubmit={this.handleSubmit}>
                                 <div className="form-group">
 
                                     <label>
