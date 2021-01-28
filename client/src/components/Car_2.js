@@ -25,16 +25,16 @@ export default class Car_2 extends Component {
             <div>
                 <img src={car_image} alt="car view" />
                 <KeyboardEventHandler
-                    handleKeys={['up']}
+                    handleKeys={['8']}
                     onKeyEvent={this.handleKeyUp} />
                  <KeyboardEventHandler
-                    handleKeys={['down']}
+                    handleKeys={['5']}
                     onKeyEvent={this.handleKeyDown} />
                 <KeyboardEventHandler
-                    handleKeys={['right']}
+                    handleKeys={['6']}
                     onKeyEvent={this.handleKeyRight} />
                 <KeyboardEventHandler
-                    handleKeys={['left']}
+                    handleKeys={['4']}
                     onKeyEvent={this.handleKeyLeft} />
             </div>
 

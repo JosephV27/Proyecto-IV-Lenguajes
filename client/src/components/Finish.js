@@ -5,7 +5,7 @@ export default class Start extends Component {
     render() {
         return (
             <div className={"start"}>
-                Inicio
+                META
             </div>
         )
     }
