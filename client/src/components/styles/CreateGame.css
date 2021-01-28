@@ -1,12 +1,29 @@
+
+body{
+    margin: 0px;
+    width:100%;
+    height: 50em;
+
+}
+.create_game{
+
+    background-image: url(../../images/crear_partida.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
 .game-mode-title {
     text-align: left;
     margin-left: 10px;
-    margin-top: 20px;
+    margin-top: 0px;
+    color: #ffffff;
 }
 
 .track-title{
     margin-left: 10px;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .figure {
@@ -14,15 +31,18 @@
     margin-left: 200px;
     margin-top: 20px;
     width: 30%;
+    color: #ffffff;
   }
 
 h5 {
     margin-top: 40px;
     margin-left: 10px;
+    color: #ffffff;
 }
 
 .forms {
     margin-left: 10px;
+    color: #ffffff;
 }
 
 .game-configuration-title{
@@ -30,4 +50,5 @@ h5 {
     margin-left: 10px;
     margin-top: 20px;
     margin-bottom: 15px;
+    color: #ffffff;
 }

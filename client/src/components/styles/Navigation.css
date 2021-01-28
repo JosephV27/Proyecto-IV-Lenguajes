@@ -1,0 +1,15 @@
+.navbar-nav {
+    float: left;
+    margin: 0px;
+    right: 4%;
+    transform: translatex(-50%);
+    position: relative;
+
+}
+
+li{
+
+    margin-left: 20px  ;
+    margin-right: 20px;
+
+}

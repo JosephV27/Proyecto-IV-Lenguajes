@@ -45,7 +45,7 @@ class CreateGame extends Component {
 
     render() {
         return (
-            <div>
+            <body className="create_game">
                 <div>
                     <h4 className="game-mode-title">Seleccione el tipo de juego: </h4>
                     <figure className="figure">
@@ -92,8 +92,8 @@ class CreateGame extends Component {
                         </div>
                     </div>
                 </div>
-
-            </div>
+                
+            </body>
 
         );
     }
