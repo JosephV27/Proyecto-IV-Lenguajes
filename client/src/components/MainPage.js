@@ -5,8 +5,7 @@ function MainPage() {
     return (
         
         <body className="main_page">
-            <h2 className="entry-title">Bienvenido a Luiki Kart</h2>
-            <audio src="../soundtracks/soundtrack.mp3"   autoPlay="true" loop="true"></audio>    
+            <h2 className="entry-title">Bienvenido a Luiki Kart</h2>  
 
         </body>
     );

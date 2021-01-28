@@ -50,7 +50,7 @@ class CreateGame extends Component {
                     <h4 className="game-mode-title">Seleccione el tipo de juego: </h4>
                     <figure className="figure">
                         <input type="image" src={vs} alt="choose the game mode" height="270" onClick={() => alert("Seleccionó el modo de juego versus")} />
-                        <figcaption className="figure-caption text-right">Vs: Correrán durante el tiempo que deseen hasta que todos terminen</figcaption>
+                        <figcaption>Vs: Correrán durante el tiempo que deseen hasta que todos terminen</figcaption>
                     </figure>
                 </div>
                 <h4 className="game-configuration-title">Configuraciones de Partida</h4>

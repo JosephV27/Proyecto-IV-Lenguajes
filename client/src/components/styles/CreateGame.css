@@ -26,6 +26,17 @@ body{
     color: #ffffff;
 }
 
+label{
+    color: #ffffff;
+
+}
+
+figcaption{
+    color: #000000;
+
+
+}
+
 .figure {
     display: block;
     margin-left: 200px;
