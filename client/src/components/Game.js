@@ -10,12 +10,16 @@ import Car_2 from './Car_2';
 class Game extends React.Component {
 
     state = {
-        finishTiles: [23, 40, 57, 74],
-        obstacles: [6, 91, 108, 125, 142, 159, 176, 193, 210, 227, 244, 261, 278, 295, 312, 329, 346, 363, 380, 397, 414, 431, 448, 465, 482, 499, 516, 601, 618],
-        car_1: [19],
-        car_2: [16],
-        ahead_1: true,
-        ahead_2: true
+        finishTiles: [23, 40, 57, 74, 91],
+        obstacles: [6, 108, 125, 142, 159, 176, 193, 210, 227, 244, 261, 278, 295, 312, 329, 346, 363, 380, 397, 414, 431, 448, 465, 482, 499, 516, 601, 600, 
+            599, 598, 490, 602, 603, 604, 588, 572, 506, 556, 540, 523, 489, 472, 455, 438, 421, 404, 387, 370, 353, 336, 319, 302, 285,
+            268, 251, 234, 217, 200, 183, 166, 149, 132, 115, 98, 7, 8, 26, 44, 62, 80, 5, 4, 82, 66, 50, 34, 18, 2, 3, 99, 116, 133, 150, 167, 184, 201, 218, 235,
+            252, 269, 286, 303, 320, 337, 354, 371, 388, 405, 422, 439, 456, 473, 507, 524, 542, 560, 578, 596, 597, 515, 498, 481, 464, 447, 430, 413, 396, 379, 362,
+            345, 328, 311, 294, 277, 260, 243, 226, 209, 192, 175, 158, 141, 124, 107],
+        car_1: [87],
+        car_2: [85],
+        laps_1: 3,
+        laps_2: 3
     }
 
     createBoard = () => {
@@ -43,13 +47,17 @@ class Game extends React.Component {
     move_up_1 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number + 17)) {
-                console.log("No puede moverse aqui");
+                //pass
             }
-            else if (this.state.finishTiles.includes(number + 17)) {
+            else if (this.state.finishTiles.includes(number + 17) && this.state.laps_1 > 1) {
                 return {
-                    finishTiles: []
+                    car_1: [number + 28],
+                    laps_1: this.state.laps_1 - 1
                 }
-                alert("gano el carro 1");
+            }
+            else if (this.state.finishTiles.includes(number + 17) && this.state.laps_1 === 1){
+                alert("ganó el carro 1");
+
             }
             else {
                 return {
@@ -62,13 +70,16 @@ class Game extends React.Component {
     move_down_1 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number - 17)) {
-                console.log("No puede moverse aqui");
+                //pass
             }
-            else if (this.state.finishTiles.includes(number - 17)) {
+            else if (this.state.finishTiles.includes(number - 17) && this.state.laps_1 > 1) {
                 return {
-                    finishTiles: []
+                    car_1: [number - 28],
+                    laps_1: this.state.laps_1 - 1
                 }
-                alert("gano el carro 1");
+            }
+            else if (this.state.finishTiles.includes(number - 17) && this.state.laps_1 === 1){
+                alert("ganó el carro 1");
             }
             else {
                 return {
@@ -81,13 +92,16 @@ class Game extends React.Component {
     move_right_1 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number - 1)) {
-                console.log("No puede moverse aqui");
+                //pass
             }
-            else if (this.state.finishTiles.includes(number - 1)) {
+            else if (this.state.finishTiles.includes(number - 1) && this.state.laps_1 > 1) {
                 return {
-                    finishTiles: []
+                    car_1: [number - 2],
+                    laps_1: this.state.laps_1 - 1
                 }
-                alert("gano el carro 1");
+            }
+            else if (this.state.finishTiles.includes(number - 1) && this.state.laps_1 === 1){
+                alert("ganó el carro 1");
             }
             else {
                 return {
@@ -100,13 +114,16 @@ class Game extends React.Component {
     move_left_1 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number + 1)) {
-                console.log("No puede moverse aqui");
+                //pass 
             }
-            else if (this.state.finishTiles.includes(number + 1)) {
+            else if (this.state.finishTiles.includes(number + 1) && this.state.laps_1 > 1) {
                 return {
-                    finishTiles: []
+                    car_1: [number + 2],
+                    laps_1: this.state.laps_1 - 1
                 }
-                alert("gano el carro 1");
+            }
+            else if (this.state.finishTiles.includes(number + 1) && this.state.laps_1 === 1){
+                alert("ganó el carro 1");
             }
             else {
                 return {
@@ -119,7 +136,17 @@ class Game extends React.Component {
     move_up_2 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number + 17)) {
-                alert("No puede moverse aqui");
+                //pass
+            }
+            else if (this.state.finishTiles.includes(number + 17) && this.state.laps_2 > 1) {
+                return {
+                    car_2: [number + 28],
+                    laps_2: this.state.laps_2 - 1
+                }
+            }
+            else if (this.state.finishTiles.includes(number + 17) && this.state.laps_2 === 1){
+                alert("ganó el carro 2");
+
             }
             else {
                 return {
@@ -132,7 +159,16 @@ class Game extends React.Component {
     move_down_2 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number - 17)) {
-                alert("No puede moverse aqui");
+                //pass
+            }
+            else if (this.state.finishTiles.includes(number - 17) && this.state.laps_2 > 1) {
+                return {
+                    car_2: [number - 28],
+                    laps_2: this.state.laps_2 - 1
+                }
+            }
+            else if (this.state.finishTiles.includes(number - 17) && this.state.laps_2 === 1){
+                alert("ganó el carro 2");
             }
             else {
                 return {
@@ -145,7 +181,16 @@ class Game extends React.Component {
     move_right_2 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number - 1)) {
-                alert("No puede moverse aqui");
+                //pass
+            }
+            else if (this.state.finishTiles.includes(number - 1) && this.state.laps_2 > 1) {
+                return {
+                    car_2: [number - 2],
+                    laps_2: this.state.laps_2 - 1
+                }
+            }
+            else if (this.state.finishTiles.includes(number - 1) && this.state.laps_2 === 1){
+                alert("ganó el carro 2");
             }
             else {
                 return {
@@ -158,7 +203,16 @@ class Game extends React.Component {
     move_left_2 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number + 1)) {
-                alert("No puede moverse aqui");
+                //pass 
+            }
+            else if (this.state.finishTiles.includes(number + 1) && this.state.laps_2 > 1) {
+                return {
+                    car_2: [number + 2],
+                    laps_2: this.state.laps_2 - 1
+                }
+            }
+            else if (this.state.finishTiles.includes(number + 1) && this.state.laps_2 === 1){
+                alert("ganó el carro 2");
             }
             else {
                 return {
@@ -171,7 +225,7 @@ class Game extends React.Component {
     render() {
         return (
             <div className="game-board">
-                <Grid className="prueba"
+                <Grid
                     width={50}
                     gap={0}
                 >
