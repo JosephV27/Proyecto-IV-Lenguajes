@@ -4,7 +4,8 @@ import Grid from 'react-css-grid'
 import Tile from './Tile'
 import Start from './Start'
 import Obstacle from './Obstacle';
-import Car from './Car';
+import Car_1 from './Car_1';
+import Car_2 from './Car_2';
 
 class Game extends React.Component {
 
@@ -32,73 +33,115 @@ class Game extends React.Component {
                 : this.state.obstacles.includes(number)
                     ? <Obstacle number={number} />
                     : this.state.car_1.includes(number)
-                        ? <Car move={this.move_first_car} number={number} />
+                        ? <Car_1 move_up={this.move_up_1} move_down={this.move_down_1} move_right={this.move_right_1} move_left={this.move_left_1} number={number} />
                         : this.state.car_2.includes(number)
-                            ? <Car move={this.move_second_car} number={number} />
-                            : <Tile />
+                            ? <Car_2 move_up={this.move_up_2} move_down={this.move_down_2} move_right={this.move_right_2} move_left={this.move_left_2} number={number} />
+                            : <Tile number={number}/>
         ))
     }
 
-    move_down_first_car = (number) => {
-        if (number === 11) {
-            console.log("Ganaste");
-        }
-        else {
-            this.setState({
-                car_1: [number - 17]
-            });
-        }
-    }
-
-    move_down_second_car = (number) => {
-        if (number === 3) {
-            console.log("Ganaste");
-        }
-        else {
-            this.setState({
-                car_2: [number - 17]
-            });
-        }
-    }
-
-    move_first_car = (number) => {
-        this.setState(function () {
-            if (this.state.ahead_1 === false) {
-                this.move_down_first_car(number)
-            }
-            else if (number === 624) {
-                return {
-                    car_1: [623],
-                    ahead_1: false
-                }
+    move_up_1 = (number) => {
+        this.setState( function () {
+            if (this.state.obstacles.includes(number+17)) {
+                alert("No puede moverse aqui");
             }
             else {
                 return {
                     car_1: [number + 17]
                 }
             }
-        }
-        )
+        })
     }
 
-    move_second_car = (number) => {
-        this.setState(function () {
-            if (this.state.ahead_2 === false) {
-                this.move_down_second_car(number)
+    move_down_1 = (number) => {
+        this.setState( function () {
+            if (this.state.obstacles.includes(number-17)) {
+                alert("No puede moverse aqui");
             }
-            else if (number === 616) {
+            else {
                 return {
-                    car_2: [615],
-                    ahead_2: false
+                    car_1: [number - 17]
                 }
+            }
+        })
+    }
+
+    move_right_1 = (number) => {
+        this.setState( function () {
+            if (this.state.obstacles.includes(number-1)) {
+                alert("No puede moverse aqui");
+            }
+            else {
+                return {
+                    car_1: [number - 1]
+                }
+            }
+        })
+    }
+
+    move_left_1 = (number) => {
+        this.setState( function () {
+            if (this.state.obstacles.includes(number+1)) {
+                alert("No puede moverse aqui");
+            }
+            else {
+                return {
+                    car_1: [number + 1]
+                }
+            }
+        })
+    }
+
+    move_up_2 = (number) => {
+        this.setState( function () {
+            if (this.state.obstacles.includes(number+17)) {
+                alert("No puede moverse aqui");
             }
             else {
                 return {
                     car_2: [number + 17]
                 }
             }
-        }
-        )
+        })
+    }
+
+    move_down_2 = (number) => {
+        this.setState( function () {
+            if (this.state.obstacles.includes(number-17)) {
+                alert("No puede moverse aqui");
+            }
+            else {
+                return {
+                    car_2: [number - 17]
+                }
+            }
+        })
+    }
+
+    move_right_2 = (number) => {
+        this.setState( function () {
+            if (this.state.obstacles.includes(number-1)) {
+                alert("No puede moverse aqui");
+            }
+            else {
+                return {
+                    car_2: [number - 1]
+                }
+            }
+        })
+    }
+
+    move_left_2 = (number) => {
+        this.setState( function () {
+            if (this.state.obstacles.includes(number+1)) {
+                alert("No puede moverse aqui");
+            }
+            else {
+                return {
+                    car_2: [number + 1]
+                }
+            }
+        })
     }
 
     render() {
