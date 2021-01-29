@@ -3,32 +3,13 @@ import Navigation from './components/Navigation';
 import MainPage from './components/MainPage';
 import CreateGame from './components/CreateGame';
 import Game from './components/Game';
-import socket from './components/Socket';
-import react, {useState} from 'react';
 
 
 
 function App() {
-	const {nombre,setNombre} = useState("");
-	const {registrado, setRegistrado} = useState(false);
 
-
-	const register = (e) =>{
-		e.preventDefault()
-		if(nombre !== ""){
-
-			setRegistrado(true);
-		}
-	}
 	return (
-		<Router>
-			<div>
-				<form>
-					<label htmlFor="">Introduzca su nombre</label>
-					<input value={nombre} onChange={e => setNombre(e.target.value)}/>
-				</form>
-			</div>
-			
+		<Router>		
 			<Navigation/>
 			<Route path="/" exact component={MainPage} />
 			<Route path="/crear-partida" component={CreateGame} />
