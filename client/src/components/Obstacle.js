@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import barrier from '../images/barrier.svg'
+import barrier from '../images/barrier.jpg'
 
 export default class Obstacle extends Component{
 
