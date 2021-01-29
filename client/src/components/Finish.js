@@ -5,7 +5,7 @@ export default class Start extends Component {
 
     render() {
         return (
-            <img src= {finish_line} className={"finish"} alt="finish line of the race" />
+            <img src= {finish_line} className={"start"} />
             
         )
     }

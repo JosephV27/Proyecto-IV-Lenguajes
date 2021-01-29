@@ -10,11 +10,11 @@ class CreateGame extends Component {
         super(props);
 
         this.state = {
-            laps: 0,
+            laps: "",
             players: "",
             track: ""
 
-        };
+        }
     }
 
     handleLapsChange = (event) => {
@@ -38,6 +38,9 @@ class CreateGame extends Component {
     handleSubmit = (event) => {
         // alert(`${this.state.laps} ${this.state.players} ${this.state.track}`);
         event.preventDefault();
+        return (
+            <h1>Hola Mundo</h1>
+        );
     }
 
     render() {

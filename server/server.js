@@ -14,6 +14,11 @@ io.on('connection', socket => {
 
         console.log("Usuario conectado");
     })
+    socket.on ('move_up', (number) =>{
+        console.log("MOVER ARRIBA CARRO 1")
+        io.emit("number", {number});
+
+    })
 
 
 });

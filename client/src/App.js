@@ -9,15 +9,32 @@ import react, {useState} from 'react';
 
 
 function App() {
-	
-	return (
+	const {nombre,setNombre} = useState("");
+	const {registrado, setRegistrado} = useState(false);
 
+
+	const register = (e) =>{
+		e.preventDefault()
+		if(nombre !== ""){
+
+			setRegistrado(true);
+		}
+	}
+	return (
 		<Router>
+			<div>
+				<form>
+					<label htmlFor="">Introduzca su nombre</label>
+					<input value={nombre} onChange={e => setNombre(e.target.value)}/>
+				</form>
+			</div>
+			
 			<Navigation/>
 			<Route path="/" exact component={MainPage} />
 			<Route path="/crear-partida" component={CreateGame} />
-			<Route path="/juego" render={(props) => (<Game {...props}/>)}/>
+			<Route path="/juego" component={Game} />
 		</Router>
+	
 	);
 }
 
