@@ -16,7 +16,7 @@ function App() {
 			<Navigation/>
 			<Route path="/" exact component={MainPage} />
 			<Route path="/crear-partida" component={CreateGame} />
-			<Route path="/juego" component={Game} />
+			<Route path="/juego" render={(props) => (<Game {...props}/>)}/>
 		</Router>
 	);
 }
