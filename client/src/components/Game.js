@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useRef} from 'react';
+import React, { useEffect, useState } from 'react';
 import socket from './Socket'
 import './styles/Game.css';
 import Grid from 'react-css-grid'
@@ -7,6 +7,10 @@ import Finish from './Finish'
 import Obstacle from './Obstacle';
 import Car_1 from './Car_1';
 import Car_2 from './Car_2';
+import { Socket } from 'socket.io-client';
+
+
+
 
 
 
@@ -19,6 +23,7 @@ class Game extends React.Component {
 
     }, [nombre]);
 */
+
 
 
     /*
@@ -45,8 +50,7 @@ class Game extends React.Component {
         laps_1: 3,
         laps_2: 3
     }
-    
-
+   
     createBoard = () => {
         let tileArray = []
         for (let counter = 625; counter > 0; counter--) {
@@ -55,6 +59,7 @@ class Game extends React.Component {
         return this.occupyTiles(tileArray);
     }
 
+    
     occupyTiles = (tileArray) => {
         return tileArray.map(number => (
             this.state.finishTiles.includes(number)
@@ -62,39 +67,46 @@ class Game extends React.Component {
                 : this.state.obstacles.includes(number)
                     ? <Obstacle number={number} />
                     : this.state.car_1.includes(number)
-                        ? <Car_1 move_up={this.move_up_1} move_down={this.move_down_1} move_right={this.move_right_1} move_left={this.move_left_1} number={number} />
+                        ? <Car_1 move_up={this.componentDidMount} move_down={this.componentDidMount} move_right={this.componentDidMount} move_left={this.componentDidMount} number={number} />
                         : this.state.car_2.includes(number)
-                            ? <Car_2 move_up={this.move_up_2} move_down={this.move_down_2} move_right={this.move_right_2} move_left={this.move_left_2} number={number} />
+                            ? <Car_2 move_up={this.componentDidMount} move_down={this.componentDidMount} move_right={this.componentDidMount} move_left={this.componentDidMount} number={number} />
                             : <Tile number={number} />
         ))
     }
 
     move_up_1 = (number) => {
-  
+
         this.setState(function () {
+              
             if (this.state.obstacles.includes(number + 17)) {
                 //pass
             }
             else if (this.state.finishTiles.includes(number + 17) && this.state.laps_1 > 1) {
+                
                 return {
+                    
                     car_1: [number + 28],
                     laps_1: this.state.laps_1 - 1
                 }
             }
             else if (this.state.finishTiles.includes(number + 17) && this.state.laps_1 === 1){
                 alert("ganó el carro 1");
-
+                
             }
             else {
+                
                 return {
+                    
                     car_1: [number + 17]
+                    
                 }
             }
-    
+            
         })
-        socket.emit ('move_up', number);
+       
+       
     }
-
+    
     move_down_1 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number - 17)) {
@@ -248,9 +260,50 @@ class Game extends React.Component {
                 }
             }
         })
-    }
 
+    
+    }
+    componentDidMount = ()=>{
+        
+       
+        socket.on('car_1_move_up',position=>{
+            this.move_up_1(position);
+        })
+        
+        socket.on('car_1_move_down',position=>{
+            this.move_down_1(position);
+        })
+        
+        socket.on('car_1_move_left',position=>{
+            this.move_left_1(position);
+        })
+        
+        socket.on('car_1_move_right',position=>{
+            this.move_right_1(position);
+        })
+
+        socket.on('car_2_move_up',position=>{
+            this.move_up_2(position);
+        })
+        
+        socket.on('car_2_move_down',position=>{
+            this.move_down_2(position);
+        })
+        
+        socket.on('car_2_move_left',position=>{
+            this.move_left_2(position);
+        })
+        
+        socket.on('car_2_move_right',position=>{
+            this.move_right_2(position);
+        })
+        return()=>{socket.off()}
+        
+        
+    }
+    
     render() {
+        
         return (
             <div className="game-board">
                 <Grid
@@ -264,25 +317,7 @@ class Game extends React.Component {
     }
 }
 
-/*
-const Game= ({nombre})=>{
+    
 
-    useEffect(() =>{ 
-
-        socket.emit('conectado', nombre)
-
-    }, [nombre]);
-
-    const movimiento = (e) => {
-        e.preventDefault();
-        socket.emit('movimiento',)
-
-    }
-    return(
-
-        <Game/>
-
-    )     
-}
-*/
+ 
 export default Game;

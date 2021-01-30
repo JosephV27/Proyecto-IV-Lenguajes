@@ -14,13 +14,40 @@ io.on('connection', socket => {
 
         console.log("Usuario conectado");
     })
-    socket.on ('move_up', (number) =>{
-        console.log("MOVER ARRIBA CARRO 1")
-        io.emit("number", {number});
 
+    socket.on ('move_up_car_1', position =>{
+        io.emit("car_1_move_up",position);
+    })
+    
+    socket.on ('move_down_car_1', position =>{
+        io.emit("car_1_move_down",position);
+    })
+    
+    socket.on ('move_left_car_1', position =>{
+        io.emit("car_1_move_left",position);
     })
 
+    
+    socket.on ('move_right_car_1', position =>{
+        io.emit("car_1_move_right",position);
+    })
 
+    socket.on ('move_up_car_2', position =>{
+        io.emit("car_2_move_up",position);
+    })
+    
+    socket.on ('move_down_car_2', position =>{
+        io.emit("car_2_move_down",position);
+    })
+    
+    socket.on ('move_left_car_2', position =>{
+        io.emit("car_2_move_left",position);
+    })
+
+    
+    socket.on ('move_right_car_2', position =>{
+        io.emit("car_2_move_right",position);
+    })
 });
 
 server.listen(4000,() => console.log("Servidor inicializado"));
