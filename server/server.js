@@ -15,7 +15,19 @@ io.on('connection', socket => {
         console.log("Usuario conectado");
     })
 
-    socket.on ('move_up_car_1', position =>{
+    socket.on('move_car_1',(position,bandera)=>{
+
+        io.emit("yes_move_car_1",position,bandera)
+
+    })
+
+    socket.on('move_car_2',(position,bandera)=>{
+
+        io.emit("yes_move_car_2",position,bandera)
+
+    })
+
+   /* socket.on ('move_up_car_1', position =>{
         io.emit("car_1_move_up",position);
     })
     
@@ -48,6 +60,7 @@ io.on('connection', socket => {
     socket.on ('move_right_car_2', position =>{
         io.emit("car_2_move_right",position);
     })
+    */
 });
 
 server.listen(4000,() => console.log("Servidor inicializado"));

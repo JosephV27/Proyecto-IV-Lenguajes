@@ -264,9 +264,50 @@ class Game extends React.Component {
     
     }
     componentDidMount = ()=>{
-        
+        socket.on('yes_move_car_1',(position,bandera)=>{
+            if(bandera===1){
+                this.move_up_1(position)
+                
+            }
+            else if (bandera===2){
+                this.move_down_1(position);
+
+            }
+            
+            else if (bandera===3){
+                this.move_right_1(position);
+
+            }
+            
+            else if (bandera===4){
+                this.move_left_1(position);
+
+            }
+        })
+
+        socket.on('yes_move_car_2',(position,bandera)=>{
+            if(bandera===1){
+                
+                this.move_up_2(position)
+                
+            }
+            else if (bandera===2){
+                this.move_down_2(position);
+
+            }
+            
+            else if (bandera===3){
+                this.move_right_2(position);
+
+            }
+            
+            else if (bandera===4){
+                this.move_left_2(position);
+
+            }
+        })
        
-        socket.on('car_1_move_up',position=>{
+        /*socket.on('car_1_move_up',position=>{
             this.move_up_1(position);
         })
         
@@ -297,6 +338,7 @@ class Game extends React.Component {
         socket.on('car_2_move_right',position=>{
             this.move_right_2(position);
         })
+        */
         return()=>{socket.off()}
         
         
