@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import vs from '../images/vs.jpeg';
 import './styles/CreateGame.css'
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
+
 
 class CreateGame extends Component {
 
-    constructor(props) {
-        super(props);
+    // constructor(props) {
+    //     super(props);
 
-        this.state = {
-            laps: "",
-            players: "",
-            track: ""
+    state = {
+        laps: "",
+        players: "",
+        track: ""
 
-        }
     }
+    // }
 
     handleLapsChange = (event) => {
         this.setState({
@@ -78,12 +79,19 @@ class CreateGame extends Component {
                                         Seleccione la pista:
 					                </label>
                                     <select value={this.state.track} onChange={this.handleTrackChange}>
-                                        <option value="ciudad">Ciudad</option>
-                                        <option value="desierto">Desierto</option>
-                                        <option value="pueblo">Pueblo</option>
+                                        <option value="facil">Fácil</option>
+                                        <option value="medio">Medio</option>
+                                        <option value="dificil">Difícil</option>
                                     </select>
                                 </div>
-                                <Link className="btn btn-primary btn-lg" role="button" to="/juego">Crear Partida</Link>
+                                <Link className="btn btn-primary btn-lg" role="button" to={{
+                                    pathname: "/juego",
+                                    state: {
+                                        laps: this.state.laps,
+                                        players: this.state.players,
+                                        track: this.state.track
+                                    }
+                                }}>Crear Partida</Link>
                             </form>
                         </div>
                         <div className="col-md-4">
@@ -92,7 +100,6 @@ class CreateGame extends Component {
                         </div>
                     </div>
                 </div>
-                
             </body>
 
         );
