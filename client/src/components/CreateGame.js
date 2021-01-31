@@ -7,16 +7,12 @@ import { Link} from 'react-router-dom';
 
 class CreateGame extends Component {
 
-    // constructor(props) {
-    //     super(props);
-
     state = {
         laps: "",
         players: "",
         track: ""
 
     }
-    // }
 
     handleLapsChange = (event) => {
         this.setState({
@@ -37,11 +33,9 @@ class CreateGame extends Component {
     }
 
     handleSubmit = (event) => {
-        // alert(`${this.state.laps} ${this.state.players} ${this.state.track}`);
+        alert(`${this.state.laps} ${this.state.players} ${this.state.track}`);
         event.preventDefault();
-        return (
-            <h1>Hola Mundo</h1>
-        );
+        window.location.href = "/juego";
     }
 
     render() {
@@ -79,9 +73,10 @@ class CreateGame extends Component {
                                         Seleccione la pista:
 					                </label>
                                     <select value={this.state.track} onChange={this.handleTrackChange}>
-                                        <option value="facil">Fácil</option>
-                                        <option value="medio">Medio</option>
-                                        <option value="dificil">Difícil</option>
+                                        <option value="mode">dificultad: </option>
+                                        <option value="easy">Fácil</option>
+                                        <option value="medium">Medio</option>
+                                        <option value="hard">Difícil</option>
                                     </select>
                                 </div>
                                 <Link className="btn btn-primary btn-lg" role="button" to={{
