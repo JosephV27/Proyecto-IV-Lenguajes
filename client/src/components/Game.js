@@ -8,7 +8,7 @@ import Obstacle from './Obstacle';
 import Car_1 from './Car_1';
 import Car_2 from './Car_2';
 import ReactAudioPlayer from 'react-audio-player';
-import soundtrack from '../soundtracks/soundtrack_3.mp3';
+import soundtrack from '../soundtracks/soundtrack_1.mp3';
 
 
 
@@ -328,8 +328,9 @@ class Game extends React.Component {
             <div className="game-board">
                 <ReactAudioPlayer
                     src={soundtrack}
-                    autoPlay
-                    loop
+                    autoPlay='true'
+                    loop='true'
+                    volume={0.06}
 
                 />
                 <button onClick={this.updateInitialState}>Comenzar Juego</button>
