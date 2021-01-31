@@ -7,6 +7,9 @@ import Finish from './Finish'
 import Obstacle from './Obstacle';
 import Car_1 from './Car_1';
 import Car_2 from './Car_2';
+import ReactAudioPlayer from 'react-audio-player';
+import soundtrack from '../soundtracks/soundtrack_1.mp3';
+
 
 
 class Game extends React.Component {
@@ -67,6 +70,7 @@ class Game extends React.Component {
                 car_2: [93]
             })
         }
+        
 
     }
 
@@ -331,7 +335,14 @@ class Game extends React.Component {
     render() {
 
         return (
+            
+            
             <div className="game-board">
+                    <ReactAudioPlayer
+                        src={soundtrack}
+                        autoPlay
+                        
+                    />
                 <button onClick= {this.updateInitialState}>Comenzar Juego</button>
                 <Grid
                     width={50}
