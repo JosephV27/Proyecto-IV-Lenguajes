@@ -39,7 +39,7 @@ class Game extends React.Component {
         }
         else if (this.state.track === 'medium') {
             this.setState({
-                finishTiles: [23,40,57],
+                finishTiles: [23, 40, 57],
                 obstacles: [107, 106, 99, 100, 123, 124, 157, 158, 140, 141, 175, 174, 192, 191, 209, 208, 226, 225, 242, 241, 258, 259, 275, 274, 291, 292, 309, 308, 116, 133, 150,
                     167, 184, 201, 218, 235, 117, 252, 269, 286, 303, 320, 337, 326, 325, 343, 342, 360, 359, 377, 376, 394, 393, 409, 426, 443, 460, 477, 494, 511, 529, 547, 371, 388,
                     405, 422, 439, 456, 473, 490, 507, 524, 354, 541, 559, 576, 577, 595, 613, 614, 615, 616, 617, 618, 619, 620, 604, 588, 572, 556, 540, 523, 506, 489, 472, 548, 549, 550,
@@ -54,7 +54,7 @@ class Game extends React.Component {
         }
         else if (this.state.track === 'hard') {
             this.setState({
-                finishTiles: [39,22],
+                finishTiles: [39, 22],
                 obstacles: [13, 30, 47, 64, 81, 98, 115, 132, 149, 166, 183, 200, 217, 234, 251, 268, 285, 301, 317, 333, 350, 368, 386, 404, 421, 438, 455, 472, 489, 506, 523, 540, 557, 574, 591, 608, 625, 573,
                     589, 605, 621, 348, 331, 364, 380, 396, 413, 430, 447, 464, 481, 498, 515, 532, 549, 548, 530, 512, 494, 426, 442, 459, 477, 409, 393, 377, 361, 344, 327, 310, 293, 276, 258, 257, 256, 238, 221
                     , 204, 187, 170, 154, 137, 120, 104, 87, 71, 55, 56, 73, 90, 107, 124, 141, 158, 175, 192, 209, 226, 243, 260, 277, 313, 295, 63, 45, 27, 9, 8, 7, 6, 5, 4, 3, 2, 1, 114, 108, 17, 33, 49, 65, 82, 99, 116
@@ -67,7 +67,7 @@ class Game extends React.Component {
                 car_2: [21]
             })
         }
-        
+
 
     }
 
@@ -96,9 +96,7 @@ class Game extends React.Component {
     }
 
     move_up_1 = (number) => {
-        console.log(this.state.laps_1)
-        console.log(this.state.track)
-        this.setState(function() {
+        this.setState(function () {
 
             if (this.state.obstacles.includes(number + 17)) {
                 //pass
@@ -137,8 +135,6 @@ class Game extends React.Component {
                 }
             }
             else {
-                console.log(this.state.laps_1)
-                console.log(this.state.track)
                 return {
                     car_1: [number - 17]
                 }
@@ -147,7 +143,7 @@ class Game extends React.Component {
     }
 
     move_right_1 = (number) => {
-        this.setState(function() {
+        this.setState(function () {
             if (this.state.obstacles.includes(number - 1)) {
                 //pass
             }
@@ -158,8 +154,6 @@ class Game extends React.Component {
                 }
             }
             else {
-                console.log(this.state.laps_1)
-                console.log(this.state.track)
                 return {
                     car_1: [number - 1]
                 }
@@ -179,8 +173,6 @@ class Game extends React.Component {
                 }
             }
             else {
-                console.log(this.state.laps_1)
-                console.log(this.state.track)
                 return {
                     car_1: [number + 1]
                 }
@@ -263,8 +255,8 @@ class Game extends React.Component {
             }
         })
 
-
     }
+
     componentDidMount = () => {
         socket.on('yes_move_car_1', (position, flag) => {
             if (flag === 1) {
@@ -332,20 +324,19 @@ class Game extends React.Component {
     render() {
 
         return (
-            
-            
+
             <div className="game-board">
-                    <ReactAudioPlayer
-                        src={soundtrack}
-                        autoPlay
-                        loop
-                        
-                    />
-                <button onClick= {this.updateInitialState}>Comenzar Juego</button>
+                <ReactAudioPlayer
+                    src={soundtrack}
+                    autoPlay
+                    loop
+
+                />
+                <button onClick={this.updateInitialState}>Comenzar Juego</button>
                 <Grid
                     width={50}
                     gap={0}
-                    
+
                 >
                     {this.createBoard()}
                 </Grid>

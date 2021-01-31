@@ -9,7 +9,6 @@ class CreateGame extends Component {
 
     state = {
         laps: "",
-        players: "",
         track: ""
 
     }
@@ -17,12 +16,6 @@ class CreateGame extends Component {
     handleLapsChange = (event) => {
         this.setState({
             laps: event.target.value
-        })
-    }
-
-    handlePlayersChange = (event) => {
-        this.setState({
-            players: event.target.value
         })
     }
 
@@ -54,13 +47,7 @@ class CreateGame extends Component {
 					                </label>
                                     <input type="text" className="form-control" id="NumberofLaps" value={this.state.laps} onChange={this.handleLapsChange} />
                                 </div>
-                                <div className="form-group">
 
-                                    <label>
-                                        Cantidad de Jugadores:
-					                </label>
-                                    <input type="text" className="form-control" id="NumberofPlayers" value={this.state.players} onChange={this.handlePlayersChange} />
-                                </div>
                                 <div className="form-group">
 
                                     <label>
@@ -77,7 +64,6 @@ class CreateGame extends Component {
                                     pathname: "/juego",
                                     state: {
                                         laps: this.state.laps,
-                                        players: this.state.players,
                                         track: this.state.track
                                     }
                                 }}>Crear Partida</Link>

@@ -8,28 +8,24 @@ import socket from './Socket'
 export default class Car_1 extends Component {
 
     handleKeyUp = (event) => {
-        
+
         this.props.move_up(this.props.number)
-        //socket.emit ('move_up_car_1',this.props.number)
-        socket.emit('move_car_1',this.props.number, 1)
+        socket.emit('move_car_1', this.props.number, 1)
     }
 
     handleKeyDown = (event) => {
         this.props.move_down(this.props.number)
-        //socket.emit ('move_down_car_1',this.props.number)
-        socket.emit('move_car_1',this.props.number,2)
+        socket.emit('move_car_1', this.props.number, 2)
     }
 
     handleKeyRight = (event) => {
         this.props.move_right(this.props.number)
-        //socket.emit ('move_right_car_1',this.props.number)
-        socket.emit('move_car_1',this.props.number,3)
+        socket.emit('move_car_1', this.props.number, 3)
     }
 
     handleKeyLeft = (event) => {
         this.props.move_left(this.props.number)
-        //socket.emit ('move_left_car_1',this.props.number)
-        socket.emit('move_car_1',this.props.number,4)
+        socket.emit('move_car_1', this.props.number, 4)
     }
 
     render() {
@@ -39,8 +35,8 @@ export default class Car_1 extends Component {
                 <KeyboardEventHandler
                     handleKeys={['w']}
                     onKeyEvent={this.handleKeyUp} />
-                    
-                 <KeyboardEventHandler
+
+                <KeyboardEventHandler
                     handleKeys={['s']}
                     onKeyEvent={this.handleKeyDown} />
                 <KeyboardEventHandler

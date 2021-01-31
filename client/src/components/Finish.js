@@ -5,8 +5,8 @@ export default class Finish extends Component {
 
     render() {
         return (
-            <img src= {finish_line} className={"finish"} />
-            
+            <img src={finish_line} className={"finish"} />
+
         )
     }
 }
