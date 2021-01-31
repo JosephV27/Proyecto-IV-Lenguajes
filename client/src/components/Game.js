@@ -104,9 +104,9 @@ class Game extends React.Component {
                 : this.state.obstacles.includes(number)
                     ? <Obstacle number={number} />
                     : this.state.car_1.includes(number)
-                        ? <Car_1 move_up={this.componentDidMount} move_down={this.componentDidMount} move_right={this.componentDidMount} move_left={this.componentDidMount} number={number} />
+                        ? <Car_1 move_up={this.move_up_1} move_down={this.move_down_1} move_right={this.move_right_1} move_left={this.move_left_1} number={number} />
                         : this.state.car_2.includes(number)
-                            ? <Car_2 move_up={this.componentDidMount} move_down={this.componentDidMount} move_right={this.componentDidMount} move_left={this.componentDidMount} number={number} />
+                            ? <Car_2 move_up={this.move_up_2} move_down={this.move_down_2} move_right={this.move_right_2} move_left={this.move_left_2} number={number} />
                             : <Tile number={number} />
         ))
     }
@@ -304,6 +304,7 @@ class Game extends React.Component {
     }
     componentDidMount = ()=>{
         socket.on('yes_move_car_1',(position,bandera)=>{
+            console.log("CARRO 1")
             if(bandera===1){
                 this.move_up_1(position)
                 
@@ -325,6 +326,7 @@ class Game extends React.Component {
         })
 
         socket.on('yes_move_car_2',(position,bandera)=>{
+            console.log("CARRO 2")
             if(bandera===1){
                 
                 this.move_up_2(position)
