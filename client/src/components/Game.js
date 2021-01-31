@@ -25,8 +25,6 @@ class Game extends React.Component {
     }
 
     updateInitialState = () => {
-        console.log("entre a la funcion")
-        console.log(this.state.track)
         if (this.state.track === 'easy') {
             this.setState({
                 finishTiles: [23, 40, 57, 74, 91],
@@ -40,7 +38,6 @@ class Game extends React.Component {
             })
         }
         else if (this.state.track === 'medium') {
-            console.log("entre al if")
             this.setState({
                 finishTiles: [23,40,57],
                 obstacles: [107, 106, 99, 100, 123, 124, 157, 158, 140, 141, 175, 174, 192, 191, 209, 208, 226, 225, 242, 241, 258, 259, 275, 274, 291, 292, 309, 308, 116, 133, 150,
@@ -111,7 +108,7 @@ class Game extends React.Component {
             else if (this.state.finishTiles.includes(number + 17) && this.state.laps_1 > 1) {
                 return {
 
-                    car_1: [number + 28],
+                    car_1: [number + 34],
                     laps_1: this.state.laps_1 - 1
                 }
             }
@@ -135,7 +132,7 @@ class Game extends React.Component {
             }
             else if (this.state.finishTiles.includes(number - 17) && this.state.laps_1 > 1) {
                 return {
-                    car_1: [number - 28],
+                    car_1: [number - 34],
                     laps_1: this.state.laps_1 - 1
                 }
             }
@@ -198,7 +195,7 @@ class Game extends React.Component {
             }
             else if (this.state.finishTiles.includes(number + 17) && this.state.laps_2 > 1) {
                 return {
-                    car_2: [number + 28],
+                    car_2: [number + 34],
                     laps_2: this.state.laps_2 - 1
                 }
             }
@@ -217,7 +214,7 @@ class Game extends React.Component {
             }
             else if (this.state.finishTiles.includes(number - 17) && this.state.laps_2 > 1) {
                 return {
-                    car_2: [number - 28],
+                    car_2: [number - 34],
                     laps_2: this.state.laps_2 - 1
                 }
             }
@@ -273,27 +270,27 @@ class Game extends React.Component {
             if (flag === 1) {
                 this.move_up_1(position)
                 if (this.state.finishTiles.includes(position + 17) && this.state.laps_1 === 1) {
-                    alert("Win Car 1!!");
+                    alert("Ganó el carro 1!!");
                 }
             }
             else if (flag === 2) {
                 this.move_down_1(position);
                 if (this.state.finishTiles.includes(position - 17) && this.state.laps_1 === 1) {
-                    alert("Win Car 1!!");
+                    alert("Ganó el carro 1!!");
                 }
             }
 
             else if (flag === 3) {
                 this.move_right_1(position);
                 if (this.state.finishTiles.includes(position - 1) && this.state.laps_1 === 1) {
-                    alert("Win Car 1!!");
+                    alert("Ganó el carro 1!!");
                 }
             }
 
             else if (flag === 4) {
                 this.move_left_1(position);
                 if (this.state.finishTiles.includes(position + 1) && this.state.laps_1 === 1) {
-                    alert("Win Car 1!!");
+                    alert("Ganó el carro 1!!");
                 }
             }
         })
@@ -304,27 +301,27 @@ class Game extends React.Component {
 
                 this.move_up_2(position)
                 if (this.state.finishTiles.includes(position + 17) && this.state.laps_2 === 1) {
-                    alert("Win Car 2!!");
+                    alert("Ganó el carro 2!!");
                 }
             }
             else if (flag === 2) {
                 this.move_down_2(position);
                 if (this.state.finishTiles.includes(position - 17) && this.state.laps_2 === 1) {
-                    alert("Win Car 2!!");
+                    alert("Ganó el carro 2!!");
                 }
             }
 
             else if (flag === 3) {
                 this.move_right_2(position);
                 if (this.state.finishTiles.includes(position - 1) && this.state.laps_2 === 1) {
-                    alert("Win Car 2!!");
+                    alert("Ganó el carro 2!!");
                 }
             }
 
             else if (flag === 4) {
                 this.move_left_2(position);
                 if (this.state.finishTiles.includes(position + 1) && this.state.laps_2 === 1) {
-                    alert("Win Car 2!!");
+                    alert("Ganó el carro 2!!");
                 }
             }
         })

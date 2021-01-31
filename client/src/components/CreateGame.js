@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import vs from '../images/vs.jpeg';
 import './styles/CreateGame.css'
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class CreateGame extends Component {
@@ -30,12 +30,6 @@ class CreateGame extends Component {
         this.setState({
             track: event.target.value
         })
-    }
-
-    handleSubmit = (event) => {
-        alert(`${this.state.laps} ${this.state.players} ${this.state.track}`);
-        event.preventDefault();
-        window.location.href = "/juego";
     }
 
     render() {
