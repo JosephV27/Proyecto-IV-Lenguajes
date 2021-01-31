@@ -26,7 +26,23 @@ Si se desea lanzar el servidor utilizar:
 
 ### Pruebas de funcionalidad <img src= https://upload.wikimedia.org/wikipedia/commons/b/b0/Light_green_check.svg width=20 height=20>
 
-<img src= /capturas_funcionalidad/menu_principal.PNG width=200>
+<img src= /capturas_funcionalidad/menu_principal.PNG width=1000>
+**Imagen 01. Menú principal**
+
+Esta sería la página principal del juego, aquí el jugador puede irse a las opciones de crear partida, unirse a juego y ver ranking.
+
+
+<img src= /capturas_funcionalidad/crear_partida.PNG width=1000>
+**Imagen 02. Crear partida**
+
+En esta página el jugador puede crear una partida con los parámetros de cantidad de vueltas y una pista.
+
+<img src= /capturas_funcionalidad/pista1.PNG width=500>
+**Imagen 03. Pista 1**
+<img src= /capturas_funcionalidad/pista2.PNG width=500>
+**Imagen 04. Pista 2**
+<img src= /capturas_funcionalidad/pista3.PNG width=500>
+**Imagen 05. Pista 3**
 
 ### Descripción del problema <img src= https://images.uncyclomedia.co/uncyclopedia/en/0/01/DramaticQuestionMark.png width =20 height=20>
 
