@@ -26,7 +26,7 @@ Si se desea lanzar el servidor utilizar:
 
 ### Pruebas de funcionalidad <img src= https://upload.wikimedia.org/wikipedia/commons/b/b0/Light_green_check.svg width=20 height=20>
 
-
+<img src= /capturas_funcionalidad/menu_principal.PNG width=200>
 
 ### Descripción del problema <img src= https://images.uncyclomedia.co/uncyclopedia/en/0/01/DramaticQuestionMark.png width =20 height=20>
 
@@ -79,20 +79,24 @@ siguiente información:
 
 
 ### Diseño del programa <img src=https://cdn2.iconfinder.com/data/icons/creative-and-design-12/64/Creative-Development-idea-research-design-512.png width=20 height=20>
+Para el desarrollo de este proyecto se optó por utilizar React junto con Javascript, y para el servidor se utilizó nodeJS con Express, se tomó esta decisión porque fue la que vimos que se adaptaba mejor al proyecto, además de que otros frameworks tenían una curva de aprendizaje mayor.
 
 
 ### Librerías usadas <img src=https://image.flaticon.com/icons/png/512/130/130304.png width=20 height=20>
 
-|Estructura   |                                      Funciones                                 |
-|-------------|--------------------------------------------------------------------------------|
-|             |                                                                         |
+|Nombre|Función|
+|-|-|
+|Axios|Dependencia de Express para el servidor|
+|||
 
 ### Análisis de resultados
-
-#### Objetivos logrados 
-
-#### Objetivos no logrados 
-
+- Menu principal del cliente: Logrado
+- Crear partida: el jugador puede crear una partida escogiendo la cantidad de vueltas y un mapa.
+- Pistas predefinidas: se cuentan con las 3 pistas, las tres de 25x25 con obstáculos y el punto de llegada y partida son los mismos, pero le faltan las sorpresas.
+- Juego: Permite mover a un carrito en la pista, sin embargo el movimiento no es constante y con shift, si no que se debe presionar las teclas WASD para el carro 1, o las teclas numéricas 8456 para el carro 2, el movimiento del carro no es continuo, cada vez que se presiona una tecla el carro se mueve un espacio. El vehículo si se termina de mover si choca con un obstáculo, sin embargo debido a que el carro se mueve al presionar las teclas, no existe un archivo de configuración que indique cuantos espacios se movería por segundo. Si un vehículo atraviesa la meta las veces que el usuario haya puesto de vueltas ganará.
+- Unirse a juego: el jugador puede unirse a una partida, sin embargo esta no es por código, si no que es la misma para cualquier persona que ingrese a la página a jugar, y un problema es que cualquier persona puede ingresar a mover el carro que quiera.
+- Estadísticas por juego: No logrado
+- Ranking: No logrado
 
 ### Bitácora
 
@@ -101,6 +105,8 @@ La bitácora de los commits se encuentran dentro en la ruta `docs/` en la cual s
 ---
 Autores:
 
-**Wilhelm Carstens (Danny Ocean) @wolam**
+**Joseph Valenciano Madrigal @Josephv27**
 
-**Joseph Valenciano @Josephv27**
+**Randall Zumbado Huertas @randox19**
+
+**Randy Conejo Juárez @randycj**
