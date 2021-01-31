@@ -293,46 +293,45 @@ class Game extends React.Component {
 
     }
     componentDidMount = () => {
-        socket.on('yes_move_car_1', (position, bandera) => {
-            console.log("CARRO 1")
-            if (bandera === 1) {
+        socket.on('yes_move_car_1', (position, flag) => {
+            if (flag === 1) {
                 this.move_up_1(position)
 
             }
-            else if (bandera === 2) {
+            else if (flag === 2) {
                 this.move_down_1(position);
 
             }
 
-            else if (bandera === 3) {
+            else if (flag === 3) {
                 this.move_right_1(position);
 
             }
 
-            else if (bandera === 4) {
+            else if (flag === 4) {
                 this.move_left_1(position);
 
             }
         })
 
-        socket.on('yes_move_car_2', (position, bandera) => {
+        socket.on('yes_move_car_2', (position, flag) => {
             console.log("CARRO 2")
-            if (bandera === 1) {
+            if (flag === 1) {
 
                 this.move_up_2(position)
 
             }
-            else if (bandera === 2) {
+            else if (flag === 2) {
                 this.move_down_2(position);
 
             }
 
-            else if (bandera === 3) {
+            else if (flag === 3) {
                 this.move_right_2(position);
 
             }
 
-            else if (bandera === 4) {
+            else if (flag === 4) {
                 this.move_left_2(position);
 
             }
