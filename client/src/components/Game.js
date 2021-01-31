@@ -95,7 +95,8 @@ class Game extends React.Component {
     }
 
     move_up_1 = (number) => {
-
+        console.log(this.state.laps_1)
+        console.log(this.state.track)
         this.setState(function() {
 
             if (this.state.obstacles.includes(number + 17)) {
@@ -110,14 +111,7 @@ class Game extends React.Component {
                     laps_1: this.state.laps_1 - 1
                 }
             }
-            else if (this.state.finishTiles.includes(number + 17) && this.state.laps_1 === 1) {
-                alert("ganó el carro 1");
-
-            }
             else {
-                console.log(this.state.laps_1)
-                console.log(this.state.track)
-
                 return {
 
                     car_1: [number + 17]
@@ -141,9 +135,6 @@ class Game extends React.Component {
                     laps_1: this.state.laps_1 - 1
                 }
             }
-            else if (this.state.finishTiles.includes(number - 17) && this.state.laps_1 === 1) {
-                alert("ganó el carro 1");
-            }
             else {
                 console.log(this.state.laps_1)
                 console.log(this.state.track)
@@ -164,9 +155,6 @@ class Game extends React.Component {
                     car_1: [number - 2],
                     laps_1: this.state.laps_1 - 1
                 }
-            }
-            else if (this.state.finishTiles.includes(number - 1) && this.state.laps_1 === 1) {
-                alert("ganó el carro 1");
             }
             else {
                 console.log(this.state.laps_1)
@@ -189,9 +177,6 @@ class Game extends React.Component {
                     laps_1: this.state.laps_1 - 1
                 }
             }
-            else if (this.state.finishTiles.includes(number + 1) && this.state.laps_1 === 1) {
-                alert("ganó el carro 1");
-            }
             else {
                 console.log(this.state.laps_1)
                 console.log(this.state.track)
@@ -213,10 +198,6 @@ class Game extends React.Component {
                     laps_2: this.state.laps_2 - 1
                 }
             }
-            else if (this.state.finishTiles.includes(number + 17) && this.state.laps_2 === 1) {
-                alert("ganó el carro 2");
-
-            }
             else {
                 return {
                     car_2: [number + 17]
@@ -235,9 +216,6 @@ class Game extends React.Component {
                     car_2: [number - 28],
                     laps_2: this.state.laps_2 - 1
                 }
-            }
-            else if (this.state.finishTiles.includes(number - 17) && this.state.laps_2 === 1) {
-                alert("ganó el carro 2");
             }
             else {
                 return {
@@ -258,9 +236,6 @@ class Game extends React.Component {
                     laps_2: this.state.laps_2 - 1
                 }
             }
-            else if (this.state.finishTiles.includes(number - 1) && this.state.laps_2 === 1) {
-                alert("ganó el carro 2");
-            }
             else {
                 return {
                     car_2: [number - 1]
@@ -280,9 +255,6 @@ class Game extends React.Component {
                     laps_2: this.state.laps_2 - 1
                 }
             }
-            else if (this.state.finishTiles.includes(number + 1) && this.state.laps_2 === 1) {
-                alert("ganó el carro 2");
-            }
             else {
                 return {
                     car_2: [number + 1]
@@ -296,21 +268,29 @@ class Game extends React.Component {
         socket.on('yes_move_car_1', (position, flag) => {
             if (flag === 1) {
                 this.move_up_1(position)
-
+                if (this.state.finishTiles.includes(position + 17) && this.state.laps_1 === 1) {
+                    alert("Win Car 1!!");
+                }
             }
             else if (flag === 2) {
                 this.move_down_1(position);
-
+                if (this.state.finishTiles.includes(position - 17) && this.state.laps_1 === 1) {
+                    alert("Win Car 1!!");
+                }
             }
 
             else if (flag === 3) {
                 this.move_right_1(position);
-
+                if (this.state.finishTiles.includes(position - 1) && this.state.laps_1 === 1) {
+                    alert("Win Car 1!!");
+                }
             }
 
             else if (flag === 4) {
                 this.move_left_1(position);
-
+                if (this.state.finishTiles.includes(position + 1) && this.state.laps_1 === 1) {
+                    alert("Win Car 1!!");
+                }
             }
         })
 
@@ -319,21 +299,29 @@ class Game extends React.Component {
             if (flag === 1) {
 
                 this.move_up_2(position)
-
+                if (this.state.finishTiles.includes(position + 17) && this.state.laps_2 === 1) {
+                    alert("Win Car 2!!");
+                }
             }
             else if (flag === 2) {
                 this.move_down_2(position);
-
+                if (this.state.finishTiles.includes(position - 17) && this.state.laps_2 === 1) {
+                    alert("Win Car 2!!");
+                }
             }
 
             else if (flag === 3) {
                 this.move_right_2(position);
-
+                if (this.state.finishTiles.includes(position - 1) && this.state.laps_2 === 1) {
+                    alert("Win Car 2!!");
+                }
             }
 
             else if (flag === 4) {
                 this.move_left_2(position);
-
+                if (this.state.finishTiles.includes(position + 1) && this.state.laps_2 === 1) {
+                    alert("Win Car 2!!");
+                }
             }
         })
 
@@ -344,10 +332,11 @@ class Game extends React.Component {
 
         return (
             <div className="game-board">
+                <button onClick= {this.updateInitialState}>Comenzar Juego</button>
                 <Grid
                     width={50}
                     gap={0}
-                    onMouseOver={this.updateInitialState}
+                    
                 >
                     {this.createBoard()}
                 </Grid>

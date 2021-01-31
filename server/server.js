@@ -10,15 +10,15 @@ const io = socketio(server);
 
 io.on('connection', socket => {
 
-    socket.on('move_car_1',(position,bandera)=>{
+    socket.on('move_car_1',(position,flag)=>{
 
-        io.emit("yes_move_car_1",position,bandera)
+        io.emit("yes_move_car_1",position,flag)
 
     })
 
-    socket.on('move_car_2',(position,bandera)=>{
+    socket.on('move_car_2',(position,flag)=>{
 
-        io.emit("yes_move_car_2",position,bandera)
+        io.emit("yes_move_car_2",position,flag)
 
     })
 });
