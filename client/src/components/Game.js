@@ -340,7 +340,8 @@ class Game extends React.Component {
             <div className="game-board">
                     <ReactAudioPlayer
                         src={soundtrack}
-                        autoPlay='true'
+                        autoPlay
+                        loop
                         
                     />
                 <button onClick= {this.updateInitialState}>Comenzar Juego</button>
