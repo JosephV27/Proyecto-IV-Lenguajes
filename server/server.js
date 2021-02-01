@@ -22,9 +22,9 @@ io.on('connection', socket => {
 
     })
 
-    socket.on('winner',(laps_c1,laps_c2, laps)=>{
+    socket.on('winner',(laps_c1,laps_c2)=>{
 
-        io.emit("verify_winner",laps_c1,laps_c2, laps)
+        io.emit("verify_winner",laps_c1,laps_c2)
 
     })
 });

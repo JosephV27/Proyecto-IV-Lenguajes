@@ -19,9 +19,8 @@ class Game extends React.Component {
         obstacles: [],
         car_1: [],
         car_2: [],
-        laps: this.props.location.state.laps,
-        laps_1: this.props.location.state.laps *2,
-        laps_2: this.props.location.state.laps *2,
+        laps_1: this.props.location.state.laps,
+        laps_2: this.props.location.state.laps,
         track: this.props.location.state.track
     }
 
@@ -90,15 +89,15 @@ class Game extends React.Component {
                 : this.state.obstacles.includes(number)
                     ? <Obstacle number={number} />
                     : this.state.car_1.includes(number)
-                        ? <Car_1 move_up={this.move_up_1} move_down={this.move_down_1} move_right={this.move_right_1} move_left={this.move_left_1} number={number} laps_c1={this.state.laps_1} laps_c2={this.state.laps_2} laps={this.state.laps}/>
+                        ? <Car_1 move_up={this.move_up_1} move_down={this.move_down_1} move_right={this.move_right_1} move_left={this.move_left_1} number={number} laps_c1={this.state.laps_1} laps_c2={this.state.laps_2} />
                         : this.state.car_2.includes(number)
-                            ? <Car_2 move_up={this.move_up_2} move_down={this.move_down_2} move_right={this.move_right_2} move_left={this.move_left_2} number={number} laps_c1={this.state.laps_1} laps_c2={this.state.laps_2} laps={this.state.laps}/>
+                            ? <Car_2 move_up={this.move_up_2} move_down={this.move_down_2} move_right={this.move_right_2} move_left={this.move_left_2} number={number} laps_c1={this.state.laps_1} laps_c2={this.state.laps_2} />
                             : <Tile number={number} />
         ))
     }
 
     move_up_1 = (number) => {
-        
+
         this.setState(function () {
 
             if (this.state.obstacles.includes(number + 17)) {
@@ -135,12 +134,7 @@ class Game extends React.Component {
             if (this.state.obstacles.includes(number - 1)) {
                 //pass
             }
-            else if (this.state.finishTiles.includes(number - 1) && this.state.laps_1 > 1) {
-                return {
-                    car_1: [number - 2],
-                    laps_1: this.state.laps_1 - 1
-                }
-            }
+
             else {
                 return {
                     car_1: [number - 1]
@@ -154,7 +148,7 @@ class Game extends React.Component {
             if (this.state.obstacles.includes(number + 1)) {
                 //pass 
             }
-            
+
             else {
                 return {
                     car_1: [number + 1]
@@ -195,12 +189,7 @@ class Game extends React.Component {
             if (this.state.obstacles.includes(number - 1)) {
                 //pass
             }
-            else if (this.state.finishTiles.includes(number - 1) && this.state.laps_2 > 1) {
-                return {
-                    car_2: [number - 2],
-                    laps_2: this.state.laps_2 - 1
-                }
-            }
+
             else {
                 return {
                     car_2: [number - 1]
@@ -225,19 +214,24 @@ class Game extends React.Component {
 
     componentDidMount = () => {
 
-        //socket.emit('winner', this.state.laps_1, this.state.laps_2, this.state.laps)
+        socket.on('verify_winner', (laps_c1, laps_c2) => {
+            if (laps_c1 === 0) {
 
-        socket.on('verify_winner', (laps_c1, laps_c2, laps) => {
+                let winner = window.confirm("Ganó Carro 1");
 
-            console.log("c1: ", laps_c1)
-            console.log("c2: ", laps_c2)
-            console.log("cT: ", laps)
-            if (laps_c1 === 1){
-                alert("Gano carro 1");
+                if (winner) {
+                    window.location = "http://frumbox.ddns.net:3000/crear-partida";
+                }
+
             }
 
-            if (laps_c2 === laps){
-                alert("Gano carro 2");
+            if (laps_c2 === 0) {
+                let winner = window.confirm("Ganó Carro 2");
+
+                if (winner) {
+                    window.location = "http://frumbox.ddns.net:3000/crear-partida";
+                }
+
             }
         })
 
@@ -248,39 +242,61 @@ class Game extends React.Component {
             }
             else if (flag === 2) {
                 this.move_down_1(position);
-              
+
             }
 
             else if (flag === 3) {
                 this.move_right_1(position);
+                this.setState(function () {
+
+                    if (this.state.finishTiles.includes(position - 1) && this.state.laps_1 > 0) {
+                        return {
+                            car_1: [position - 2],
+                            laps_1: this.state.laps_1 - 1
+                        }
+                    }
+
+
+                })
+
             }
 
             else if (flag === 4) {
                 this.move_left_1(position);
-              
+
             }
 
         })
 
         socket.on('yes_move_car_2', (position, flag) => {
-            
-            
+
+
             if (flag === 1) {
 
                 this.move_up_2(position)
-              
+
             }
             else if (flag === 2) {
-                
+
                 this.move_down_2(position);
-            
+
             }
 
             else if (flag === 3) {
                 this.move_right_2(position);
+                this.setState(function () {
 
+                    if (this.state.finishTiles.includes(position - 1) && this.state.laps_2 > 0) {
+                        return {
+                            car_2: [position - 2],
+                            laps_2: this.state.laps_2 - 1
+                        }
+                    }
+
+
+                })
             }
-            
+
             else if (flag === 4) {
                 this.move_left_2(position);
             }

@@ -6,26 +6,26 @@ export default class Car_2 extends Component {
 
     handleKeyUp = (event) => {
         this.props.move_up(this.props.number)
-        socket.emit('winner', this.props.laps_c1, this.props.laps_c2, this.props.laps)
         socket.emit('move_car_2', this.props.number, 1)
+        socket.emit('winner', this.props.laps_c1, this.props.laps_c2)
     }
 
     handleKeyDown = (event) => {
         this.props.move_down(this.props.number)
-        socket.emit('winner', this.props.laps_c1, this.props.laps_c2, this.props.laps)
         socket.emit('move_car_2', this.props.number, 2)
+        socket.emit('winner', this.props.laps_c1, this.props.laps_c2)
     }
 
     handleKeyRight = (event) => {
-        this.props.move_right(this.props.number)
-        socket.emit('winner', this.props.laps_c1, this.props.laps_c2, this.props.laps)
+        this.props.move_right(this.props.number) 
         socket.emit('move_car_2', this.props.number, 3)
+        socket.emit('winner', this.props.laps_c1, this.props.laps_c2)
     }
 
     handleKeyLeft = (event) => {
         this.props.move_left(this.props.number)
-        socket.emit('winner', this.props.laps_c1, this.props.laps_c2, this.props.laps)
         socket.emit('move_car_2', this.props.number, 4)
+        socket.emit('winner', this.props.laps_c1, this.props.laps_c2) 
     }
 
     render() {

@@ -10,7 +10,6 @@ class CreateGame extends Component {
     state = {
         laps: "",
         track: ""
-
     }
 
     handleLapsChange = (event) => {
