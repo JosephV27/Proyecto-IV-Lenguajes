@@ -7,22 +7,39 @@ import { Link } from 'react-router-dom';
 
 class CreateGame extends Component {
 
+    // Estados iniciales de la clase CreateGame
     state = {
         laps: "",
         track: ""
     }
 
+    /*
+    Entradas: Recibe un evento
+    Salidas: Devuelve el estado de las vueltas actualizado
+    Funcionalidad: Actualiza el estado de las vueltas, cada vez que ocurra el evento
+    */
     handleLapsChange = (event) => {
         this.setState({
             laps: event.target.value
         })
     }
 
+    /*
+    Entradas: Recibe un evento
+    Salidas: Devuelve el estado de la pista actualizado
+    Funcionalidad: Actualiza el estado de la pista, cada vez que ocurra el evento
+    */
     handleTrackChange = (event) => {
         this.setState({
             track: event.target.value
         })
     }
+
+    /*
+    Entradas: No tiene
+    Salidas: html de la página para crear el juego
+    Funcionalidad: Renderiza el html que verá el usuario en la página para crear partida
+    */
 
     render() {
         return (
