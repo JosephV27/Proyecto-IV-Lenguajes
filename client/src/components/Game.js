@@ -13,7 +13,7 @@ import soundtrack from '../soundtracks/soundtrack_1.mp3';
 
 
 class Game extends React.Component {
-
+    //Estados iniciales de la clase Game
     state = {
         finishTiles: [],
         obstacles: [],
@@ -23,7 +23,11 @@ class Game extends React.Component {
         laps_2: this.props.location.state.laps,
         track: this.props.location.state.track
     }
-
+    /*
+    Entradas: No tiene
+    Salidas: Estados
+    Funcionalidad: Selecciona los estados iniciales del juego dependiendo de la dificultad
+    */
     updateInitialState = () => {
 
         if (this.state.track === 'easy') {
@@ -72,7 +76,11 @@ class Game extends React.Component {
 
     }
 
-
+    /*
+    Entradas: No tiene
+    Salidas: La matriz con celdas y sus respectivos espacios 
+    Funcionalidad: Selecciona los estados iniciales del juego dependiendo de la dificultad
+    */
     createBoard = () => {
         let tileArray = []
         for (let counter = 625; counter > 0; counter--) {
@@ -81,7 +89,11 @@ class Game extends React.Component {
         return this.occupyTiles(tileArray)
     }
 
-
+    /*
+    Entradas: Arreglo celdas
+    Salidas: Componentes
+    Funcionalidad: Muestra los componentes con sus respectivos estados
+    */
     occupyTiles = (tileArray) => {
         return tileArray.map(number => (
             this.state.finishTiles.includes(number)
@@ -96,6 +108,11 @@ class Game extends React.Component {
         ))
     }
 
+    /*
+    Entradas: Un número entero
+    Salidas: Estado
+    Funcionalidad: Modifica el estado del componente car_1 (movilizándolo hacia arriba en la matriz)
+    */
     move_up_1 = (number) => {
 
         this.setState(function () {
@@ -116,6 +133,11 @@ class Game extends React.Component {
 
     }
 
+    /*
+    Entradas: Un número entero
+    Salidas: Estado
+    Funcionalidad: Modifica el estado del componente car_1 (movilizándolo hacia abajo en la matriz)
+    */
     move_down_1 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number - 17)) {
@@ -129,6 +151,11 @@ class Game extends React.Component {
         })
     }
 
+    /*
+    Entradas: Un número entero
+    Salidas: Estado
+    Funcionalidad: Modifica el estado del componente car_1 (movilizándolo hacia la derecha en la matriz)
+    */
     move_right_1 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number - 1)) {
@@ -143,6 +170,11 @@ class Game extends React.Component {
         })
     }
 
+    /*
+    Entradas: Un número entero
+    Salidas: Estado
+    Funcionalidad: Modifica el estado del componente car_1 (movilizándolo hacia la izquierda en la matriz)
+    */
     move_left_1 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number + 1)) {
@@ -157,6 +189,11 @@ class Game extends React.Component {
         })
     }
 
+    /*
+    Entradas: Un número entero
+    Salidas: Estado
+    Funcionalidad: Modifica el estado del componente car_2 (movilizándolo hacia arriba en la matriz)
+    */
     move_up_2 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number + 17)) {
@@ -171,6 +208,11 @@ class Game extends React.Component {
         })
     }
 
+    /*
+    Entradas: Un número entero
+    Salidas: Estado
+    Funcionalidad: Modifica el estado del componente car_2 (movilizándolo hacia abajo en la matriz)
+    */
     move_down_2 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number - 17)) {
@@ -184,6 +226,11 @@ class Game extends React.Component {
         })
     }
 
+    /*
+    Entradas: Un número entero
+    Salidas: Estado
+    Funcionalidad: Modifica el estado del componente car_2 (movilizándolo hacia la derecha en la matriz)
+    */
     move_right_2 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number - 1)) {
@@ -198,6 +245,11 @@ class Game extends React.Component {
         })
     }
 
+    /*
+    Entradas: Un número entero
+    Salidas: Estado
+    Funcionalidad: Modifica el estado del componente car_2 (movilizándolo hacia la izquierda en la matriz)
+    */
     move_left_2 = (number) => {
         this.setState(function () {
             if (this.state.obstacles.includes(number + 1)) {
@@ -212,8 +264,19 @@ class Game extends React.Component {
 
     }
 
+    /*
+    Entradas: No tiene
+    Salidas: Estados
+    Funcionalidad: Modifica los estados de los componentes y los conecta por medio de sockets
+    para poder realizar una conexion entre todas los usuarios que visitan la página
+    */
     componentDidMount = () => {
 
+        /*
+        Entradas: Señal, Dos enteros
+        Salidas: Emitir una señal
+        Funcionalidad: Recibe señales del ganador de la carrera
+        */
         socket.on('verify_winner', (laps_c1, laps_c2) => {
             if (laps_c1 === 0) {
 
@@ -235,6 +298,11 @@ class Game extends React.Component {
             }
         })
 
+        /*
+        Entradas: Señal, Dos enteros
+        Salidas: No tiene
+        Funcionalidad: Recibe señales de movimiento del carro 1
+        */
         socket.on('yes_move_car_1', (position, flag) => {
 
             if (flag === 1) {
@@ -268,6 +336,11 @@ class Game extends React.Component {
 
         })
 
+        /*
+        Entradas: Señal, Dos enteros
+        Salidas: No tiene
+        Funcionalidad: Recibe señales de movimiento del carro 2
+        */
         socket.on('yes_move_car_2', (position, flag) => {
 
 
@@ -305,6 +378,11 @@ class Game extends React.Component {
         return () => { socket.off() }
     }
 
+    /*
+    Entradas: No tiene
+    Salidas: Retorna el HTML de una imagen 
+    Funcionalidad: Renderiza en pantalla los objetos
+    */
     render() {
 
         return (
