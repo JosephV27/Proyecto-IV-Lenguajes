@@ -19,12 +19,13 @@ class Game extends React.Component {
         obstacles: [],
         car_1: [],
         car_2: [],
-        laps_1: this.props.location.state.laps * 2,
-        laps_2: this.props.location.state.laps * 2,
+        laps_1: this.props.location.state.laps *2,
+        laps_2: this.props.location.state.laps *2,
         track: this.props.location.state.track
     }
 
     updateInitialState = () => {
+
         if (this.state.track === 'easy') {
             this.setState({
                 finishTiles: [23, 40, 57, 74, 91],
@@ -96,19 +97,11 @@ class Game extends React.Component {
     }
 
     move_up_1 = (number) => {
+        
         this.setState(function () {
 
             if (this.state.obstacles.includes(number + 17)) {
                 //pass
-                console.log(this.state.laps_1)
-                console.log(this.state.track)
-            }
-            else if (this.state.finishTiles.includes(number + 17) && this.state.laps_1 > 1) {
-                return {
-
-                    car_1: [number + 34],
-                    laps_1: this.state.laps_1 - 1
-                }
             }
             else {
                 return {
@@ -127,12 +120,6 @@ class Game extends React.Component {
         this.setState(function () {
             if (this.state.obstacles.includes(number - 17)) {
                 //pass
-            }
-            else if (this.state.finishTiles.includes(number - 17) && this.state.laps_1 > 1) {
-                return {
-                    car_1: [number - 34],
-                    laps_1: this.state.laps_1 - 1
-                }
             }
             else {
                 return {
@@ -166,12 +153,7 @@ class Game extends React.Component {
             if (this.state.obstacles.includes(number + 1)) {
                 //pass 
             }
-            else if (this.state.finishTiles.includes(number + 1) && this.state.laps_1 > 1) {
-                return {
-                    car_1: [number + 2],
-                    laps_1: this.state.laps_1 - 1
-                }
-            }
+            
             else {
                 return {
                     car_1: [number + 1]
@@ -185,12 +167,7 @@ class Game extends React.Component {
             if (this.state.obstacles.includes(number + 17)) {
                 //pass
             }
-            else if (this.state.finishTiles.includes(number + 17) && this.state.laps_2 > 1) {
-                return {
-                    car_2: [number + 34],
-                    laps_2: this.state.laps_2 - 1
-                }
-            }
+
             else {
                 return {
                     car_2: [number + 17]
@@ -203,12 +180,6 @@ class Game extends React.Component {
         this.setState(function () {
             if (this.state.obstacles.includes(number - 17)) {
                 //pass
-            }
-            else if (this.state.finishTiles.includes(number - 17) && this.state.laps_2 > 1) {
-                return {
-                    car_2: [number - 34],
-                    laps_2: this.state.laps_2 - 1
-                }
             }
             else {
                 return {
@@ -242,12 +213,6 @@ class Game extends React.Component {
             if (this.state.obstacles.includes(number + 1)) {
                 //pass 
             }
-            else if (this.state.finishTiles.includes(number + 1) && this.state.laps_2 > 1) {
-                return {
-                    car_2: [number + 2],
-                    laps_2: this.state.laps_2 - 1
-                }
-            }
             else {
                 return {
                     car_2: [number + 1]
@@ -261,63 +226,55 @@ class Game extends React.Component {
         socket.on('yes_move_car_1', (position, flag) => {
             if (flag === 1) {
                 this.move_up_1(position)
-                if (this.state.finishTiles.includes(position + 17) && this.state.laps_1 === 1) {
-                    alert("Ganó el carro 1!!");
-                }
             }
             else if (flag === 2) {
                 this.move_down_1(position);
-                if (this.state.finishTiles.includes(position - 17) && this.state.laps_1 === 1) {
-                    alert("Ganó el carro 1!!");
-                }
+              
             }
 
             else if (flag === 3) {
                 this.move_right_1(position);
-                if (this.state.finishTiles.includes(position - 1) && this.state.laps_1 === 1) {
+                if (this.state.finishTiles.includes(position - 1) && this.state.laps_1 === 0 ) {
                     alert("Ganó el carro 1!!");
                 }
+
             }
 
             else if (flag === 4) {
                 this.move_left_1(position);
-                if (this.state.finishTiles.includes(position + 1) && this.state.laps_1 === 1) {
-                    alert("Ganó el carro 1!!");
-                }
+              
             }
+            console.log(this.state.laps_1)
+            console.log(this.state.laps_2)
+            return () => { socket.off() }
         })
 
         socket.on('yes_move_car_2', (position, flag) => {
-            console.log("CARRO 2")
             if (flag === 1) {
 
                 this.move_up_2(position)
-                if (this.state.finishTiles.includes(position + 17) && this.state.laps_2 === 1) {
-                    alert("Ganó el carro 2!!");
-                }
+              
             }
             else if (flag === 2) {
+                
                 this.move_down_2(position);
-                if (this.state.finishTiles.includes(position - 17) && this.state.laps_2 === 1) {
-                    alert("Ganó el carro 2!!");
-                }
+            
             }
 
             else if (flag === 3) {
                 this.move_right_2(position);
-                if (this.state.finishTiles.includes(position - 1) && this.state.laps_2 === 1) {
+                if (this.state.finishTiles.includes(position - 1) && this.state.laps_2 === 0 ) {
                     alert("Ganó el carro 2!!");
                 }
-            }
 
+            }
+            
             else if (flag === 4) {
                 this.move_left_2(position);
-                if (this.state.finishTiles.includes(position + 1) && this.state.laps_2 === 1) {
-                    alert("Ganó el carro 2!!");
-                }
             }
         })
-
+        console.log(this.state.laps_1)
+        console.log(this.state.laps_2)
         return () => { socket.off() }
     }
 
@@ -329,7 +286,7 @@ class Game extends React.Component {
                 <ReactAudioPlayer
                     src={soundtrack}
                     autoPlay='true'
-                    loop='true'
+                    loop={true}
                     volume={0.06}
 
                 />
