@@ -7,6 +7,14 @@ import socket from './Socket'
 
 export default class Car_1 extends Component {
 
+    /*
+    Funciones handleKeyUp; handleKeyDown; handleKeyRight; handleKeyLeft.
+    Entradas: recibe un evento o acción
+    Salidas: No tiene
+    Funcionalidad: La función agarra el número de la casilla donde se estaría moviendo el carro,
+                   emite una señal al socket para mover el carro una casilla y emite otra señal para
+                   comprobar si el carro ya cruzo la meta las veces necesarias para ganar.
+    */
     handleKeyUp = (event) => {
         this.props.move_up(this.props.number)
         socket.emit('move_car_1', this.props.number, 1)
@@ -31,6 +39,11 @@ export default class Car_1 extends Component {
         socket.emit('winner', this.props.laps_c1, this.props.laps_c2)
     }
 
+    /*
+    Entradas: No tiene
+    Salidas: No tiene
+    Funcionalidad: Renderiza en pantalla los objetos tipo Car_1
+    */
     render() {
         return (
             <div>

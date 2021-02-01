@@ -8,6 +8,11 @@ import Game from './components/Game';
 
 class App extends Component {
 
+	/*
+    Entradas: No tiene
+    Salidas: Retorna el html con el menú principal
+    Funcionalidad: Junta las distintas páginas del menú principal en una sola
+	*/
 	render() {
 		return (
 			<Router>
