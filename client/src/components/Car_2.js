@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import car_image from '../images/car_image.svg'
+import car_image from '../images/car_image2.png'
 import KeyboardEventHandler from 'react-keyboard-event-handler';
 import socket from './Socket'
 export default class Car_2 extends Component {

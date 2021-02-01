@@ -131,6 +131,20 @@ siguiente información:
 ### Diseño del programa <img src=https://cdn2.iconfinder.com/data/icons/creative-and-design-12/64/Creative-Development-idea-research-design-512.png width=20 height=20>
 Para el desarrollo de este proyecto se optó por utilizar React junto con Javascript, y para el servidor se utilizó nodeJS con Express, se tomó esta decisión porque fue la que vimos que se adaptaba mejor al proyecto, además de que otros frameworks tenían una curva de aprendizaje mayor.
 
+#### Diagrama de comunicación
+<img src= /capturas_funcionalidad/diagrama_comunicacion.PNG width=1000>
+
+**Diagrama 01. Diagrama de comunicación**
+
+#### Diagrama de distribución
+<img src= /capturas_funcionalidad/diagrama_distribucion.PNG width=1000>
+
+**Diagrama 02. Diagrama de distribución**
+
+#### Diagrama de paquetes
+<img src= /capturas_funcionalidad/diagrama_paquetes.PNG width=500>
+
+**Diagrama 03. Diagrama de paquetes**
 
 ### Librerías usadas <img src=https://image.flaticon.com/icons/png/512/130/130304.png width=20 height=20>
 
