@@ -3,6 +3,11 @@ import './styles/Navigation.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
+/*
+    Entradas: No tiene
+    Salidas: Retorna el html con la barra de navegación
+    Funcionalidad: Crea la barra de navegación del menú principal, mediante la cual el usuario podrá seleccionar las distintas opciones
+*/
 function Navigation() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

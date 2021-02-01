@@ -25,25 +25,25 @@ Si se desea lanzar el servidor utilizar:
 
 Una vez que el programa se esté ejecutando verá la siguiente página, la cual sería la página principal.
 
-<img src= /capturas_funcionalidad/menu_principal.PNG width=1000>
+<img src= /docs/capturas_funcionalidad/menu_principal.PNG width=1000>
 
 **Imagen 01. Menú principal**
 
 Esta sería la página principal del juego, aquí el jugador puede irse a las opciones de crear partida, unirse a juego y ver ranking, para jugar una partida debemos ir a la opción de crear partida.
 
-<img src= /capturas_funcionalidad/crear_partida.PNG width=1000>
+<img src= /docs/capturas_funcionalidad/crear_partida.PNG width=1000>
 
 **Imagen 02. Crear partida**
 
 En esta pestaña el jugador puede crear una partida, puede seleccionar la cantidad de vueltas necesarias para jugar y la pista, para que otra persona entre a jugar con el debe ingresar a esta misma página y seleccionar las mismas vueltas y pista.
 
-<img src= /capturas_funcionalidad/comenzar_juego.PNG width=1000>
+<img src= /docs/capturas_funcionalidad/comenzar_juego.PNG width=1000>
 
 **Imagen 03. Comenzar juego**
 
 Después de crear la partida se debe seleccionar esta opción para cargar la pista y los carros.
 
-<img src= /capturas_funcionalidad/pista3.PNG width=500>
+<img src= /docs/capturas_funcionalidad/pista3.PNG width=500>
 
 **Imagen 04. Pista para jugar**
 
@@ -51,28 +51,28 @@ Al darle a comenzar juego se pondrá la pista seleccionada, en ella un carro se 
 
 ### Pruebas de funcionalidad <img src= https://upload.wikimedia.org/wikipedia/commons/b/b0/Light_green_check.svg width=20 height=20>
 
-<img src= /capturas_funcionalidad/menu_principal.PNG width=1000>
+<img src= /docs/capturas_funcionalidad/menu_principal.PNG width=1000>
 
 **Imagen 05. Menú principal**
 
 Esta sería la página principal del juego, aquí el jugador puede irse a las opciones de crear partida, unirse a juego y ver ranking.
 
 
-<img src= /capturas_funcionalidad/crear_partida.PNG width=1000>
+<img src= /docs/capturas_funcionalidad/crear_partida.PNG width=1000>
 
 **Imagen 06. Crear partida**
 
 En esta página el jugador puede crear una partida con los parámetros de cantidad de vueltas y una pista.
 
-<img src= /capturas_funcionalidad/pista1.PNG width=500>
+<img src= /docs/capturas_funcionalidad/pista1.PNG width=500>
 
 **Imagen 07. Pista 1**
 
-<img src= /capturas_funcionalidad/pista2.PNG width=500>
+<img src= /docs/capturas_funcionalidad/pista2.PNG width=500>
 
 **Imagen 08. Pista 2**
 
-<img src= /capturas_funcionalidad/pista3.PNG width=500>
+<img src= /docs/capturas_funcionalidad/pista3.PNG width=500>
 
 **Imagen 09. Pista 3**
 
@@ -131,15 +131,15 @@ siguiente información:
 ### Diseño del programa <img src=https://cdn2.iconfinder.com/data/icons/creative-and-design-12/64/Creative-Development-idea-research-design-512.png width=20 height=20>
 Para el desarrollo de este proyecto se optó por utilizar React junto con Javascript, y para el servidor se utilizó nodeJS con Express, se tomó esta decisión porque fue la que vimos que se adaptaba mejor al proyecto, además de que otros frameworks tenían una curva de aprendizaje mayor.
 
-<img src= /capturas_funcionalidad/diagrama_comunicacion.PNG width=1000>
+<img src= /docs/capturas_funcionalidad/diagrama_comunicacion.PNG width=1000>
 
 **Diagrama 01. Diagrama de comunicación**
 
-<img src= /capturas_funcionalidad/diagrama_distribucion.png width=1000>
+<img src= /docs/capturas_funcionalidad/diagrama_distribucion.png width=500>
 
 **Diagrama 02. Diagrama de distribución**
 
-<img src= /capturas_funcionalidad/diagrama_paquetes.PNG width=500>
+<img src= /docs/capturas_funcionalidad/diagrama_paquetes.PNG width=1000>
 
 **Diagrama 03. Diagrama de paquetes**
 
