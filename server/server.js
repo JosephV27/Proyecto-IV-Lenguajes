@@ -21,6 +21,12 @@ io.on('connection', socket => {
         io.emit("yes_move_car_2",position,flag)
 
     })
+
+    socket.on('winner',(laps_c1,laps_c2, laps)=>{
+
+        io.emit("verify_winner",laps_c1,laps_c2, laps)
+
+    })
 });
 
 server.listen(4000,() => console.log("Servidor inicializado"));
