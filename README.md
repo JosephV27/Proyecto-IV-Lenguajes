@@ -23,35 +23,60 @@ Abrir [http://localhost:3000](http://localhost:3000) y verlo en el navegador.
 Si se desea lanzar el servidor utilizar:
 #### `npm run dev`
 
+Una vez que el programa se esté ejecutando verá la siguiente página, la cual sería la página principal.
+
+<img src= /capturas_funcionalidad/menu_principal.PNG width=1000>
+
+**Imagen 01. Menú principal**
+
+Esta sería la página principal del juego, aquí el jugador puede irse a las opciones de crear partida, unirse a juego y ver ranking, para jugar una partida debemos ir a la opción de crear partida.
+
+<img src= /capturas_funcionalidad/crear_partida.PNG width=1000>
+
+**Imagen 02. Crear partida**
+
+En esta pestaña el jugador puede crear una partida, puede seleccionar la cantidad de vueltas necesarias para jugar y la pista, para que otra persona entre a jugar con el debe ingresar a esta misma página y seleccionar las mismas vueltas y pista.
+
+<img src= /capturas_funcionalidad/comenzar_juego.PNG width=1000>
+
+**Imagen 03. Comenzar juego**
+
+Después de crear la partida se debe seleccionar esta opción para cargar la pista y los carros.
+
+<img src= /capturas_funcionalidad/pista3.PNG width=500>
+
+**Imagen 04. Pista para jugar**
+
+Al darle a comenzar juego se pondrá la pista seleccionada, en ella un carro se mueve con las teclas WASD y el otro con el teclado numérico con las teclas 8456, hay que dar las vueltas en sentido contrario a las manecillas del reloj, y ganará el primero que complete la cantidad de vueltas seleccionadas en el menú de crear partida.
 
 ### Pruebas de funcionalidad <img src= https://upload.wikimedia.org/wikipedia/commons/b/b0/Light_green_check.svg width=20 height=20>
 
 <img src= /capturas_funcionalidad/menu_principal.PNG width=1000>
 
-**Imagen 01. Menú principal**
+**Imagen 05. Menú principal**
 
 Esta sería la página principal del juego, aquí el jugador puede irse a las opciones de crear partida, unirse a juego y ver ranking.
 
 
 <img src= /capturas_funcionalidad/crear_partida.PNG width=1000>
 
-**Imagen 02. Crear partida**
+**Imagen 06. Crear partida**
 
 En esta página el jugador puede crear una partida con los parámetros de cantidad de vueltas y una pista.
 
 <img src= /capturas_funcionalidad/pista1.PNG width=500>
 
-**Imagen 03. Pista 1**
+**Imagen 07. Pista 1**
 
 <img src= /capturas_funcionalidad/pista2.PNG width=500>
 
-**Imagen 04. Pista 2**
+**Imagen 08. Pista 2**
 
 <img src= /capturas_funcionalidad/pista3.PNG width=500>
 
-**Imagen 05. Pista 3**
+**Imagen 09. Pista 3**
 
-Estas tres serían las pistas que se pueden jugar.
+Estas tres serían las pistas que se pueden jugar, un carro se mueve con las teclas WASD y el otro con el teclado numérico 8456.
 
 ### Descripción del problema <img src= https://images.uncyclomedia.co/uncyclopedia/en/0/01/DramaticQuestionMark.png width =20 height=20>
 
@@ -81,13 +106,13 @@ Los usuarios tendrán la funcionalidad unirse a una partida:
 se le muestra los usuarios la lista de partidas por iniciar con su información: el área de juego, la
 pista, el recorrido según la temática, y los usuarios unidos.
 
-*Juego*\
+**Juego**\
 El área de juego debe disponer de un área para poder jugar o correr, donde inicialmente se muestran los vehículos (al inicio de la pista) y el usuario pueda ir moviéndolas a un espacio válido.
 
-*Pistas predefinidas*\
+**Pistas predefinidas**\
 El sistema debe tener al menos tres pistas de juego, con un nombre de la pista y una temática.
 
-*Estadísticas por juego*\
+**Estadísticas por juego**\
 Por cada juego se debe indicar lo siguiente:
 * a) Nombre de jugadores y su tiempo, ordenado ascendentemente
 * b) Pista
