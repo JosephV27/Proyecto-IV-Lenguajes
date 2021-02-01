@@ -131,17 +131,14 @@ siguiente información:
 ### Diseño del programa <img src=https://cdn2.iconfinder.com/data/icons/creative-and-design-12/64/Creative-Development-idea-research-design-512.png width=20 height=20>
 Para el desarrollo de este proyecto se optó por utilizar React junto con Javascript, y para el servidor se utilizó nodeJS con Express, se tomó esta decisión porque fue la que vimos que se adaptaba mejor al proyecto, además de que otros frameworks tenían una curva de aprendizaje mayor.
 
-#### Diagrama de comunicación
 <img src= /capturas_funcionalidad/diagrama_comunicacion.PNG width=1000>
 
 **Diagrama 01. Diagrama de comunicación**
 
-#### Diagrama de distribución
-<img src= /capturas_funcionalidad/diagrama_distribucion.PNG width=1000>
+<img src= /capturas_funcionalidad/diagrama_distribucion.png width=1000>
 
 **Diagrama 02. Diagrama de distribución**
 
-#### Diagrama de paquetes
 <img src= /capturas_funcionalidad/diagrama_paquetes.PNG width=500>
 
 **Diagrama 03. Diagrama de paquetes**
@@ -150,8 +147,15 @@ Para el desarrollo de este proyecto se optó por utilizar React junto con Javasc
 
 |Nombre|Función|
 |-|-|
+|Express|Utilizado para comunicación entre el cliente y el servidor|
 |Axios|Dependencia de Express para el servidor|
-|||
+|Socket .io|Para emitir y recibir señales entre el servidor y el cliente|
+|React-CSS-Grid|Utilizado para la creación de la tabla|
+|React-Audio-Player|Utilizado para la reproducción de música|
+|React-Router-Dom|Utilizado para la navegación de la página|
+|React-Socket.io-Client|Librería extra de socket .io para el cliente|
+|React-Keyboard-Event-Handler|Usado para capturar las teclas ingresadas por el usuario|
+|Bootstrap|Utilizado para el diseño de la página|
 
 ### Análisis de resultados
 - Menu principal del cliente: Logrado
@@ -161,6 +165,8 @@ Para el desarrollo de este proyecto se optó por utilizar React junto con Javasc
 - Unirse a juego: el jugador puede unirse a una partida, sin embargo esta no es por código, si no que es la misma para cualquier persona que ingrese a la página a jugar, y un problema es que cualquier persona puede ingresar a mover el carro que quiera.
 - Estadísticas por juego: No logrado
 - Ranking: No logrado
+
+Los objetivos no logrados fue debido a falta de conocimiento y experiencia en los lenguajes utilizados, tampoco se tuvo el suficiente tiempo para aprender lo necesario para la realización de todas las funcionalidades requeridas.
 
 ### Bitácora
 
