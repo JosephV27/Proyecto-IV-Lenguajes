@@ -1,0 +1,332 @@
+commit 09de1a227873a9ea16b92918a6cebe90dae53d51
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Mon Feb 1 14:44:49 2021 -0600
+
+    Agrego docu interna y cambio de carpetas
+
+commit 10ce2f8b375132c634379cccf92de811b515d2ed
+Author: randox19 <randoxyt@gmail.com>
+Date:   Mon Feb 1 14:44:08 2021 -0600
+
+    Subo documentación final interna del archivo game.js y server.js
+
+commit e7a3aa02e8e670cb8cf59f857f2c4b3207c8b330
+Author: RandyCJ <61055501+RandyCJ@users.noreply.github.com>
+Date:   Mon Feb 1 14:13:52 2021 -0600
+
+    se añaden librerias utilizadas
+
+commit 420db19e30574daca8600d41453f3a0c1d19184c
+Author: RandyCJ <61055501+RandyCJ@users.noreply.github.com>
+Date:   Mon Feb 1 14:02:22 2021 -0600
+
+    se agregan diagramas en el diseño del programa
+
+commit 60b0c87af2113d48f8c23eabf1a7895ed26ca610
+Author: RandyCJ <61055501+RandyCJ@users.noreply.github.com>
+Date:   Mon Feb 1 13:35:20 2021 -0600
+
+    se agrega manual de usuario
+
+commit a1b1d7d0e1045e6c2c8844692a18fa6734a3be83
+Author: randox19 <randoxyt@gmail.com>
+Date:   Mon Feb 1 12:41:55 2021 -0600
+
+    Arreglo tema de la meta final y redireccionamiento
+
+commit eb553268507036ff4317a9fdd87ab8d4ccdc0a25
+Author: RandyCJ <61055501+RandyCJ@users.noreply.github.com>
+Date:   Sun Jan 31 20:01:46 2021 -0600
+
+    Se medio arregla mensaje de ganador
+
+commit 95a8289f9dc92773c783fd0a4dd98a9a24253db3
+Author: randox19 <randoxyt@gmail.com>
+Date:   Sun Jan 31 18:04:46 2021 -0600
+
+    Trato de arreglar mensaje de gane
+
+commit c6e50ec2e4a0dfa2b6843b245db4827b4e2ac0f4
+Author: randox19 <randoxyt@gmail.com>
+Date:   Sun Jan 31 16:08:54 2021 -0600
+
+    añado un soundtrack mas y arreglo el volumen
+
+commit addbae788782b31042d953208981a807a7625020
+Author: RandyCJ <61055501+RandyCJ@users.noreply.github.com>
+Date:   Sun Jan 31 16:07:17 2021 -0600
+
+    cambios en docu
+
+commit 3ba1ceb0377a620e752c0294ea15d07b99ec5afb
+Author: RandyCJ <61055501+RandyCJ@users.noreply.github.com>
+Date:   Sun Jan 31 16:03:43 2021 -0600
+
+    arreglo de docu
+
+commit 91257ad4e88d19523d6467df3259d815fe3b37b7
+Merge: 3ae0f85 86968c4
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Sun Jan 31 15:57:55 2021 -0600
+
+    Merge branch 'main' of https://github.com/JosephV27/Proyecto-IV-Lenguajes into main
+
+commit 3ae0f85bf5b00f7dc40d8f57acd59b8906535b29
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Sun Jan 31 15:57:24 2021 -0600
+
+    Quitando comentarios y prints
+
+commit 86968c4359923e45b7df3063a0569e1f86561b84
+Author: RandyCJ <61055501+RandyCJ@users.noreply.github.com>
+Date:   Sun Jan 31 15:48:27 2021 -0600
+
+    Cambios en documentacion
+
+commit 477af1afa6958bccc73e107035a26e594e16f7bb
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Sun Jan 31 15:45:58 2021 -0600
+
+    Corrigiendo bugs y nombres de variables
+
+commit 27b8766a85bf721a5c37a8f1c83e11a32786b3f3
+Author: RandyCJ <61055501+RandyCJ@users.noreply.github.com>
+Date:   Sun Jan 31 15:37:28 2021 -0600
+
+    arreglo de metas en las pistas
+
+commit ff52037d02542bc65efea9c7f695fec6f10e961a
+Author: randox19 <randoxyt@gmail.com>
+Date:   Sun Jan 31 10:31:34 2021 -0600
+
+    Agrego loop en audio
+
+commit 116f3f8176f06ecf60f16baf09eb5e4a3713ece4
+Author: randox19 <randoxyt@gmail.com>
+Date:   Sun Jan 31 10:22:25 2021 -0600
+
+    añado otros soundtracks
+
+commit 09accd81a49e755f99f12662c0cfa0a60e8ea855
+Author: randox19 <randoxyt@gmail.com>
+Date:   Sun Jan 31 10:10:53 2021 -0600
+
+    añado musica en las carreras
+
+commit 273991307f25ad00ba7a727f720b52d92a131544
+Author: randox19 <randoxyt@gmail.com>
+Date:   Sun Jan 31 09:20:46 2021 -0600
+
+    Arreglo mensaje de ganar
+
+commit a232d81bb236d6476b23bf31fd222b0d8c43a7ad
+Author: RandyCJ <61055501+RandyCJ@users.noreply.github.com>
+Date:   Sat Jan 30 20:22:11 2021 -0600
+
+    Se empieza documentacion
+
+commit 5b621d05f36011faba3a3a5a5d445e855ea893f9
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Sat Jan 30 20:09:27 2021 -0600
+
+    quitando prints innecesarios
+
+commit f299276e76c3dc1aafe204b4a83df51779da6ee9
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Sat Jan 30 20:04:50 2021 -0600
+
+    Obteniendo opcion de pista de usuario
+
+commit 7e0ce1f43e222625c1e8e70f32442472c7e59d48
+Author: randox19 <randoxyt@gmail.com>
+Date:   Sat Jan 30 18:01:39 2021 -0600
+
+    Subo arreglo de latencia en juego online
+
+commit 1ebc46338dfee67fb3ec8fb5afc6b0e9c82047af
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Sat Jan 30 17:50:42 2021 -0600
+
+    Obteniendo datos del usuario
+
+commit 748d78fe1a0f7d92afd0c09e74e2bbacb4e9bc89
+Author: randox19 <randoxyt@gmail.com>
+Date:   Sat Jan 30 14:20:13 2021 -0600
+
+    Subo optimizacion del online
+
+commit 85a9acbad3f985f2b9c900fc1e29bcf493df03e3
+Author: randox19 <randoxyt@gmail.com>
+Date:   Sat Jan 30 13:46:58 2021 -0600
+
+    Añado multijugador de 2 personas
+
+commit 607b78261af393f78bb5113a7a459cc0dd16ee92
+Author: randox19 <randoxyt@gmail.com>
+Date:   Fri Jan 29 15:11:15 2021 -0600
+
+    Cambio imagen
+
+commit 331ec9e007eda4cf8fd5137cffdd2fdb4b8aa486
+Author: randox19 <randoxyt@gmail.com>
+Date:   Fri Jan 29 14:45:05 2021 -0600
+
+    Cambios del formulario
+
+commit dbf96eb657a2520f1050c013ea121a1f9481ce63
+Author: randox19 <randoxyt@gmail.com>
+Date:   Fri Jan 29 14:28:01 2021 -0600
+
+    agrego llamadas al servidor
+
+commit 480af46f74d2ab7201137ab691901a8e0a2d23b1
+Author: randycj <randyconejo@gmail.com>
+Date:   Thu Jan 28 20:04:01 2021 -0600
+
+    se agrega tercera pista
+
+commit 3d941e7e582f744400ffa71cf47ea193f1611008
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Thu Jan 28 19:45:11 2021 -0600
+
+    Intentando capturar datos del usuario para el juego
+
+commit e6c5faa9ee3f0136d59326bb1be5bb044ea3b2ed
+Author: randox19 <randoxyt@gmail.com>
+Date:   Thu Jan 28 19:41:11 2021 -0600
+
+    Monto el servidor conectado junto al cliente
+
+commit fe81f0d95851f8425df2fff9b729f5d490630ba2
+Author: randycj <randyconejo@gmail.com>
+Date:   Thu Jan 28 17:02:28 2021 -0600
+
+    se agrega segunda pista
+
+commit 3393f02a1914b3a25d343914acdc203a08d63da1
+Author: randox19 <randoxyt@gmail.com>
+Date:   Thu Jan 28 16:59:40 2021 -0600
+
+    Cambio etiquetas y otros arreglos
+
+commit d3ed70a7aa304a7a041a419b8f18a63d95f40e2c
+Author: randox19 <randoxyt@gmail.com>
+Date:   Thu Jan 28 16:36:45 2021 -0600
+
+    Añado error de imagenes
+
+commit 3e74b9993945e605bdf60fc49491a2875f6d766e
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Thu Jan 28 15:41:58 2021 -0600
+
+    Agregando cantidad de vueltas
+
+commit 4e9d6e57189e3b756ff8dd0cc383a50c1f840b5d
+Author: randox19 <randoxyt@gmail.com>
+Date:   Thu Jan 28 14:35:15 2021 -0600
+
+    Agrego interfaz inicial con backgrounds
+
+commit bf05890d508814e7a0cdae2ddd3f9a00aad6ffcd
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Thu Jan 28 12:22:33 2021 -0600
+
+    Agregando meta a pista
+
+commit 64afc5a64b42372704d418f0a6a61e0f0fef5f59
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Wed Jan 27 18:41:04 2021 -0600
+
+    Corrigiendo movibilidad de carros
+
+commit f2ea3f0703091567993797dfd1f3fab16040b7ad
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Fri Jan 22 16:59:20 2021 -0600
+
+    Agregando estilos y movimientos a los objetos
+
+commit 15f46b5c303965e7a41c122f8703b8b65f81e0f5
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Fri Jan 22 13:53:58 2021 -0600
+
+    Formateando estilo de codigo
+
+commit 7673a7c60764f0cfcf1b6d66b6c2a21246330499
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Fri Jan 22 13:53:32 2021 -0600
+
+    Agregando pista para juego
+
+commit adc6e30e1462f659164ee06cfc7609839e59c1fc
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Wed Jan 20 21:50:37 2021 -0600
+
+    template de tabla
+
+commit 08ff53182db46ee8565124ace44fe2a8fb5564f9
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Wed Jan 20 18:03:45 2021 -0600
+
+    quitando warnings
+
+commit 22dbcc9fc995798e85d90df0d46df272e86943c6
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Wed Jan 20 18:03:24 2021 -0600
+
+    vista para crear partida
+
+commit 7fc28d5c4d78d7486cd60c428cc1c523f59a8b71
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Tue Jan 19 19:06:58 2021 -0600
+
+    Agregando componentes y estilos al proyecto
+
+commit 2cdbf18bc4d5d573ff40478a8aa7e15a156a11d7
+Merge: 87977a7 c55d5ad
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Mon Jan 18 20:22:20 2021 -0600
+
+    Merge branch 'main' of https://github.com/JosephV27/Proyecto-IV-Lenguajes into main
+
+commit 87977a75fb9e6e89a2756dcf03d6c6364d3ad2be
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Mon Jan 18 20:22:09 2021 -0600
+
+    agregando botones de inicio
+
+commit c55d5ad663753425f9f987317684450d7a36333d
+Author: wolam <wilhelm@estudiantec.cr>
+Date:   Mon Jan 18 19:49:52 2021 -0600
+
+    Arreglando typos en readme.
+
+commit 2bffff03e41797a2748fde5d5d59d77812c37b9c
+Author: wolam <wilhelm@estudiantec.cr>
+Date:   Mon Jan 18 19:38:35 2021 -0600
+
+    Incluyendo template de documentacion.
+
+commit 6c8750cf5d373ef09bc43f09b965be9dd9248b52
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Mon Jan 18 18:22:14 2021 -0600
+
+    sacando readme
+
+commit 7d92c927d95ea1c35bd3007a13a588c4d994bb03
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Mon Jan 18 18:20:06 2021 -0600
+
+    agregando servidor con express js
+
+commit 064d0eaf190cdd40cb667787c4ae13d609523ec8
+Author: JosephV27 <jvalencianom08@yahoo.com>
+Date:   Sat Jan 16 20:31:35 2021 -0600
+
+    Agregando template del proyecto
+
+commit 123f9737fea6feddd931a3f74683526ae94aaf25
+Author: Joseph Valenciano <61066946+JosephV27@users.noreply.github.com>
+Date:   Sat Jan 16 20:08:58 2021 -0600
+
+    Initial commit
+
